@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            font-size: 12px;
+        }
+        #messageWindow{
+            height: 250px;
+            border: 1px solid #CCCC00;
+            padding:5px;
+            overflow: scroll;
+        }
+        #wrap{
+            margin:auto;
+            width: 438px;
+        }
+    </style>
+    <script type="text/javascript" src="JS-frame/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+//          这个属性返回事件触发时距离1970年1月1日的毫秒数。
+            timestamp = 0;
+//            调用更新函数,来加载数据库已有的聊天消息
+            updateMsg();
+            $("#form").submit(function(){
+//            使用POST请求，把要传递的数据都放在第二个参数中用{}包裹
+                $.get("ajax.html",{
+                    message:$("#msg").val(),
+                    name:$("#author").val(),
+                    action:"postmsg",
+                    time:timestamp
+                },function(xml){
+//                    处理xml
+//                    请求成功后要返回的函数
+                    $("#msg").val("");
+                    addMessage(xml)
+                });
+//                用来阻止浏览器提交表单
+                return false;
+            });
+//            更新信息函数，每隔一段时间去服务器读取数据
+            function updateMsg(){
+                $.post("ajax.html",{time:timestamp},function(xml){
+//                    移除loadding 消息，等待提示
+                    $("#loading").remove();
+//                    调用解析xml的函数
+                    addMessage(xml);
+                });
+//                每隔4秒读取一次
+                setTimeout("updateMsg()",4000);
+            }
+//            解析xml文档函数，将数据显示到页面上
+            function addMessage(xml){
+//                如果值为2，则表示请求成功但没有新信息，使用$("status",xml)方法通知XML文档中寻找“status”标签
+               if($("status",xml).text()=="2") return;
+//                给XML的时间戳设定新的值
+                timestamp = $("time",xml).text();
+//                遍历到文档的数据，message需要显示在消息区的每一实例
+                $("message",xml).each(function(){
+                    var author = $("author",this).text();
+                    var content = $("text",this).text();
+                    var htmlcode = "<strong>"+author+"</strong>:"+content+"<br/>";
+//                得到数据之后，将其追加到消息显示区里
+                    $("#messageWindow").prepend(htmlcode);
+                });
+            }
+
+
+        })
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <p id="messageWindow">
+        <span id="loading">页面加载中......</span>
+    </p>
+    <form id="form">
+        姓名：<input type="text" id="author" size="50"><br>
+        内容：<input type="text" id="msg" size="50"><br>
+        <input type="submit" value="发送"><br>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload=function(){
+	
+	var oDiv=document.getElementById('div1');
+	var oDiv2=document.getElementById('gundong');
+	var aImg=oDiv.getElementsByTagName('img');
+    var aBtn=document.getElementsByTagName('input');
+	var timer=null;
+	var speed=-3;
+	
+	oDiv2.innerHTML=oDiv2.innerHTML+oDiv2.innerHTML;
+
+	oDiv2.style.width=aImg[0].offsetWidth*aImg.length+'px';
+	
+
+      function sport(){
+		if(oDiv2.offsetLeft<-oDiv2.offsetWidth/2)
+		{
+			oDiv2.style.left=0;	
+		}
+		
+		if(oDiv2.offsetLeft>0)
+		{
+			oDiv2.style.left=-oDiv2.offsetWidth/2+'px';	
+		}
+
+		oDiv2.style.left=oDiv2.offsetLeft+speed+'px';	
+	
+
+	  }
+	  
+	  
+	  timer=setInterval(sport,30);
+	 
+	
+	oDiv2.onmouseover=function()
+	{
+			
+		clearInterval(timer);
+	};
+	oDiv2.onmouseout=function()
+	{
+			
+		 timer=setInterval(sport,30);
+	};
+	
+	aBtn[0].onclick=function()
+	{
+		speed=-3;	
+	};
+	aBtn[1].onclick=function()
+	{
+		speed=3;	
+	};
+	
+	
+};
+
+</script>
+<style>
+
+* { margin:0px;
+	padding:0px;
+
+}
+
+#box {
+	width:1000px;
+	 
+	margin:auto;
+
+}
+#div1 { width:800px;
+		height:100px;
+		background:#0F6;
+		
+		position:relative;
+		margin-top:100px;
+		overflow:hidden;
+		float:left;
+		margin-left:auto;
+}
+
+#gundong img { 	width:200px;
+				height:100px;
+				float:left;
+			
+}
+#gundong {   position:absolute;
+			 left:0;
+			 top:0;
+		
+			
+}
+input { float:left;
+		margin:140px auto;}
+</style>
+
+</head>
+
+<body>
+<div id="box">
+	<input type="button" value="我可以向左走">
+    <div id="div1">
+    	
+        <div id="gundong">
+        <img src="image/1.jpg">
+        <img src="image/4.jpg">
+        <img src="image/2.jpg">
+        <img src="image/3.jpg">
+        </div>
+     
+    </div>
+    <input type="button" value="我可以向右走">
+ </div>
+</body>
+</html>

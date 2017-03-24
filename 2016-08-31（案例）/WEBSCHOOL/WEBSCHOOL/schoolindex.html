@@ -1,0 +1,329 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>上海交通大学</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/index.css">
+  <script type="text/javascript"  src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/holder.min.js"></script>
+    <script type="text/javascript" src="js/jquery.indexSlidePattern.js"></script>
+<script type="text/javascript">
+window.onload=function(){
+	$(document).ready(function(e){
+	  var opt	=	{
+		"speed"	:	"fast"		,	//变换速度,三速度可选 slow,normal,fast;
+		"by"	:	"mouseover"		,	//触发事件,click或者mouseover;
+		"auto"	:	true		,	//是否自动播放;
+		"sec"	:	3000	 		//自动播放间隔;
+	  };
+      $("#demo").IMGDEMO(opt);    
+});
+function showLocale(objD)
+{
+	var str,colorhead,colorfoot;
+	var yy = objD.getYear();
+	if(yy<1900) yy = yy+1900;
+	var MM = objD.getMonth()+1;
+	if(MM<10) MM = '0' + MM;
+	var dd = objD.getDate();
+	if(dd<10) dd = '0' + dd;
+	var ww = objD.getDay();
+	if  ( ww==0 )  colorhead="<font color=\"#FFF\">";
+	if  ( ww > 0 && ww < 6 )  colorhead="<font color=\"#FFF\">";
+	if  ( ww==6 )  colorhead="<font color=\"#FFF\">";
+	if  (ww==0)  ww="星期日";
+	if  (ww==1)  ww="星期一";
+	if  (ww==2)  ww="星期二";
+	if  (ww==3)  ww="星期三";
+	if  (ww==4)  ww="星期四";
+	if  (ww==5)  ww="星期五";
+	if  (ww==6)  ww="星期六";
+	colorfoot="</font>"
+	str = colorhead + yy + "-" + MM + "-" + dd + " "  + ww + colorfoot;
+	return(str);
+}
+function tick()
+{
+	var today;
+	today = new Date();
+	document.getElementById("localtime").innerHTML = showLocale(today);
+	
+}
+tick();
+var Ath=document.getElementsByTagName('th');
+}
+</script>
+</head>
+
+<body>
+<div class="top row">
+
+	<div class="col-md-1"></div>
+    <div class="col-md-5">
+       <a href="" title="在校生" style="color:#ffffff">在校生</a>
+    　
+    		<a href="teacher1.html" title="教职工" target="_blank" style="color:#ffffff">教职工</a>
+    　
+    		<a href="xiaoyou.html"title="校友" target="_blank" style="color:#ffffff">校友</a>
+    　
+    		<a href="" title="考生及访客" style="color:#ffffff">考生及访客</a>
+    </div>
+    <div class="col-md-6">
+    	<a href="">综合信息</a><span>|</span>
+        <a href="">信息公开</a><span>|</span>
+        <a href="">虚拟校园</a><span>|</span>
+        <a href="">English</a><span>|</span>
+        <a href="">校历</a><span>|</span>
+        <a href="">邮箱</a>
+    </div>
+
+</div>
+<div class="logo row">
+
+	<div class="col-md-1"></div>
+    <div class="col-md-3"><img src="images/logo.gif"/></div>
+    <div class="col-md-3"><img src="images/title.jpg" height="90"/></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-1"><img src="images/struct.jpg"/></div>
+    <div class="col-md-1"></div>
+
+</div>
+
+<div class="nav1 row">
+
+	<div class="col-md-1"></div>
+    <div class="col-md-3">
+    	 
+            <a  href="gaikuang.html" target="_blank">概况</a> <span style="color:FFF;padding-left:10px;padding-right:10px">|</span>
+            <a  href="">院系</a> <span style="color:FFF;padding-left:10px;padding-right:10px">|</span>
+            <a  href="">师资</a> <span style="color:FFF;padding-left:10px;padding-right:10px">|</span>
+            <a  href="">服务</a> <span style="color:FFF;padding-left:10px;padding-right:10px">|</span>
+    </div>
+    <div class="col-md-4">
+    	<span id="localtime"></span>
+     	 <a href="#">120周年校庆&nbsp;&nbsp;人才招募&nbsp;&nbsp;基金会</a>
+    </div>
+    <div class="col-md-2">
+    	<div class="form">
+        <select >
+            <option>热点专题</option>
+            <option>2015迎新网</option>
+            <option>面向未来技术遇见</option>
+            <option>上海交通大学建校120周年</option>
+            <option>图书馆</option>
+            <option>2015第十次党代表大会</option>
+            <option>热点专题</option>
+            <option>热点专题</option>
+            <option>热点专题</option>
+        </select>
+           <select>
+               <option>快速通道</option>
+               <option>2015迎新网</option>
+               <option>钱学森图书馆</option>
+               <option>校友会</option>
+               <option>就业招生</option>
+               <option>图书馆</option>
+               <option>基金会</option>
+               <option>热点专题</option>
+               <option>课程中心</option>
+               <option>饮水思源</option>
+           </select>
+    </div>
+
+    </div>
+    
+    
+
+</div>
+
+<div class="row">
+   <div class="col-md-1"></div>
+  <div class="col-md-10  demodiv ">
+    <ul id="demo">
+		<li class="active">
+			<a href="#"><img src="images/ad1.jpg"  /></a>
+		</li>
+		<li>
+			<a href="#"><img src="images/ad2.png" /></a>
+		</li>
+		<li>
+			<a href="#"><img src="images/ad3.jpg"  /></a>
+		</li>
+		<li>
+			<a href="#"><img src="images/ad4.jpg"  /></a>
+		</li>
+	
+	</ul>
+</div>
+    <div class="col-md-1"></div>
+
+</div>
+
+
+<div class="row">
+    	
+        <div class="col-md-1"></div>
+        	
+            <div class="col-md-10 ">
+            <div class=" navdiv">
+            	<div class="navbar navbar-default" id="navmenu">
+    
+   			 <ul class="nav navbar-nav">
+				<li class="dropdown bg" id="li1">
+			<a href="##" data-toggle="dropdown" class="dropdown-toggle" role="button" id="tutorial">新闻</a>
+			<ul class="dropdown-menu bg" role="menu" aria-labelledby="tutorial">
+				<li role="presentation"><a href="##">上海交大与四川省签署战略合作协议</a></li>
+				<li role="presentation"><a href="##">交大团队基于相对论激光等离子体的强太赫兹辐射源研究获突破[图]</a></li>
+				<li role="presentation"><a href="##">[两学一做]上海交大“两学一做”学习教育系列培训班开班[图]</a></li>
+			</ul>
+		</li>
+        
+        <li class="dropdown bg2" id="li1">
+			<a href="##" data-toggle="dropdown" class="dropdown-toggle" role="button" id="tutorial">通告</a>
+			<ul class="dropdown-menu bg2" role="menu" aria-labelledby="tutorial">
+				<li role="presentation"><a href="##">上海交大与四川省签署战略合作协议</a></li>
+				<li role="presentation"><a href="##">交大团队基于相对论激光等离子体的强太赫兹辐射源研究获突破[图]</a></li>
+				<li role="presentation"><a href="##">[两学一做]上海交大“两学一做”学习教育系列培训班开班[图]</a></li>
+			</ul>
+		</li>
+        <li class="dropdown bg3" id="li1">
+			<a href="##" data-toggle="dropdown" class="dropdown-toggle" role="button" id="tutorial">学术</a>
+			<ul class="dropdown-menu bg3" role="menu" aria-labelledby="tutorial">
+				<li role="presentation"><a href="##">上海交大与四川省签署战略合作协议</a></li>
+				<li role="presentation"><a href="##">交大团队基于相对论激光等离子体的强太赫兹辐射源研究获突破[图]</a></li>
+				<li role="presentation"><a href="##">[两学一做]上海交大“两学一做”学习教育系列培训班开班[图]</a></li>
+			</ul>
+		</li>
+          <li class="dropdown bg4" id="li1">
+			<a href="##" data-toggle="dropdown" class="dropdown-toggle" role="button" id="tutorial">专栏</a>
+			<ul class="dropdown-menu bg4" role="menu" aria-labelledby="tutorial">
+				<li role="presentation"><a href="##">上海交大与四川省签署战略合作协议</a></li>
+				<li role="presentation"><a href="##">交大团队基于相对论激光等离子体的强太赫兹辐射源研究获突破[图]</a></li>
+				<li role="presentation"><a href="##">[两学一做]上海交大“两学一做”学习教育系列培训班开班[图]</a></li>
+			</ul>
+		</li>
+          <li class="bg5" id="li1">
+			<a href="##">新媒体</a>
+			</li>
+			</ul>
+		</li>
+	</ul>
+
+            </div>
+         </div>   
+        </div>
+      <div class="col-md-1"></div>
+    </div>
+
+<div class="row">
+    	<div class="col-md-1"></div>
+        	
+            <div class="col-md-10  foot">
+            	<div class="div">
+                <ul>
+                    	<li ><a href="#">人才培养</a></li>
+                        <li><a href="#">招生热线</a></li>
+                        <li><a href="#">课程教学</a></li>
+                        <li><a href="#">学子风采</a></li>
+                        <li><a href="#">就业信息</a></li>
+                        <li><a href="#">创新创业</a></li>
+                    </ul>
+                </div>
+                <div class="div">
+                <ul>
+                    	<li ><a href="#">科学研究</a></li>
+                        <li><a href="#">计划项目</a></li>
+                        <li><a href="#">科技合作</a></li>
+                        <li><a href="#">基础管理</a></li>
+                        <li><a href="#">研究中心</a></li>
+                        <li><a href="#">科学期刊</a></li>
+                    </ul></div>
+                 <div class="div">
+                <ul>
+                    	<li><a href="#">国际交流</a></li>
+                        <li><a href="#">全球交大</a></li>
+                        <li><a href="#">合作伙伴</a></li>
+                        <li><a href="#">联合培养</a></li>
+                        <li><a href="#">国际教育</a></li>
+                        <li><a href="#">海外项目</a></li>
+                    </ul>
+                 </div>
+                <div class="div">
+                <ul>
+                    	<li ><a href="#">大学文化</a></li>
+                        <li><a href="#">相关资料</a></li>
+                        <li><a href="#">文化活动</a></li>
+                        <li><a href="#">文明在线</a></li>
+                        <li><a href="#">文博交大</a></li>
+                        <li><a href="#">文化社团</a></li>
+                    </ul>
+                </div>
+                 <div class="div">
+                <ul>
+                    	<li><a href="#">人才培养</a></li>
+                        <li><a href="#">招生热线</a></li>
+                        <li><a href="#">课程教学</a></li>
+                        <li><a href="#">学子风采</a></li>
+                        <li><a href="#">就业信息</a></li>
+                        <li><a href="#">创新创业</a></li>
+                    </ul>
+                </div>
+                 <div class="div">
+                <ul>
+                    	<li><a href="#">科学研究</a></li>
+                        <li><a href="#">计划项目</a></li>
+                        <li><a href="#">科技合作</a></li>
+                        <li><a href="#">基础管理</a></li>
+                        <li><a href="#">研究中心</a></li>
+                        <li><a href="#">科学期刊</a></li>
+                    </ul>
+                </div>
+              <div class="div">
+                <ul>
+                    	<li><a href="#">国际交流</a></li>
+                        <li><a href="#">全球交大</a></li>
+                        <li><a href="#">合作伙伴</a></li>
+                        <li><a href="#">联合培养</a></li>
+                        <li><a href="#">国际教育</a></li>
+                        <li><a href="#">海外项目</a></li>
+                    </ul>
+                </div>
+               <div class="div">
+                <ul>
+                    	<li><a href="#">大学文化</a></li>
+                        <li><a href="#">相关资料</a></li>
+                        <li><a href="#">文化活动</a></li>
+                        <li><a href="#">文明在线</a></li>
+                        <li><a href="#">文博交大</a></li>
+                        <li><a href="#">文化社团</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="col-md-1"></div>
+   
+    </div>
+    
+
+
+ <div class="row">
+  	
+    	<div class="col-md-12  bottom">
+        <span>沪ICP备05052060 沪举报中心 版权所有©上海交通大学</span>
+        <img src="images/icon1.png">
+        <img src="images/icon2.png">
+        <img src="images/icon3.png">
+        <br>
+        <span>地址：上海市东川路800号 邮编：200240 查号：86-21-54740000<a href="#"> 联系我们</a><a href="#"> 周边交通</a></span>
+        
+        </div>
+
+  </div>
+</body>
+</html>

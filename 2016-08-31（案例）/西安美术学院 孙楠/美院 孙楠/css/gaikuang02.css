@@ -1,0 +1,82 @@
+.lun22{
+    width: 100%;
+    height:450px;
+    position: absolute;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.lun22 ul{
+    width: 100%;
+    height:450px;
+    list-style: none;
+    position: absolute;
+    left:0px;
+    top:0px;
+}
+
+.lun22 ul li{
+    float: left;
+}
+.lun22 li img{
+    width:1365px;
+    height:450px;
+    border:20px solid #c6c6c6;
+}
+#btn22 { width:300px;
+    height:30px;
+    position:absolute;
+    right:0px;
+    top:400px;
+    z-index:1;
+}
+#btn22 input{width:30px;
+    height:30px;
+}
+#btn22 .active{ background:mediumpurple;}
+.anniu{
+    width:150px;
+    /*border:1px solid darkcyan;*/
+    margin-top: 520px;
+    margin-left: 200px;
+    float: left;
+}
+.anniu01{
+    width:150px;
+    height:40px;
+    background: #b1b1b1;
+    border-radius: 5px;
+}
+.anniu02{
+    width:150px;
+    height:30px;
+    background:#b1b1b1;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+.anniu02:hover{
+    background:#e6e8e8;
+}
+.jieshao{
+    width:800px;
+    /*border: 1px solid magenta;*/
+    float: left;
+    margin-top: 520px;
+    margin-left: 30px;
+}
+.wen{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
+    text-indent: 2em;
+    color:dimgray;
+}
+.font22{
+    font-weight: 700;
+}
+.tb{
+    width:300px;
+    border: 1px solid #c6c6c6;
+    margin-top: 30px;
+    margin-left: 50px;
+    float: left;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //变量的作用域----变量的生命周期
+        //变量起作用的范围
+        /*
+         * 变量的分类：1、全局变量  2、局部变量
+          * 全局变量是在整个页面内有效，
+          * 局部变量在其生命周期内有效
+          * 变量在定义的时候，变量的生命周期就开始了，到变量不能使用的范围（死掉）
+          * 定义方式：全局变量主要在函数之外定义
+          *          局部变量函数之内
+          *         */
+        var  temp=10;
+
+        function sum()
+        {
+            var  i=10;
+                function (){
+                    arr[i]
+                }
+            alert(temp);
+            alert('内部i'+i);
+        }
+
+        function number()
+        {
+            alert('number'+i);
+        }
+
+        alert(temp);
+        sum();
+
+        //alert('外部i'+i);
+
+        number();
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

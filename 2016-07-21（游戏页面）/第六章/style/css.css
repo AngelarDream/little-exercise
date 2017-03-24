@@ -1,0 +1,46 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+body {
+	font-family: 宋体;
+	font-size: 12px;
+	color: #454545;
+	background-image: url(../images/340.jpg);
+	background-repeat: repeat-x;
+}
+.font01 {
+	color: #3059AE;
+}
+.font02 {
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #3E68BF;
+}
+.font03 {
+	color: #55B1DF;
+}
+
+.font04 {
+	line-height: 25px;
+	color: #00B3EB;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #00B3EB;
+}
+.font05 {
+	color: #00B3EB;
+	float: left;
+	margin-left: 10px;
+}
+.font06 {
+	float: left;
+	color: #00B3EB;
+	margin-left: 10px;
+}
+.font07 {
+	float: left;
+	margin-left: 362px;
+}

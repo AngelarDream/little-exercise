@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+           var oTxt01=document.getElementById('txt01');
+
+            oTxt01.onkeydown=function(e){
+               var oEvent=e||window.event;
+
+                if((oEvent.keyCode<48 || oEvent.keyCode>57) && oEvent.keyCode!=8&& oEvent.keyCode!=37)
+                {
+                    return false;
+                }
+
+            };
+        };
+    </script>
+</head>
+<body>
+<input type="text" id="txt01">
+</body>
+</html>

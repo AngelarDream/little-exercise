@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<script>
+window.onload=function(){
+	var oMonth=document.getElementById("month");
+	
+	oMonth.onclick=function(){
+		num=parseInt(oMonth.value);
+	switch(num){	
+	    case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:
+		  alert('31');
+		  break;
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+		   alert('30');
+		   break;
+		 case 2:
+		   alert('28');
+		   break;
+		   default:alert('次月份不存在');
+		 
+		};
+	};
+	
+	
+	
+	};
+
+</script>
+</head>
+
+<body>
+<select id="month" name="month">
+ <option value="1">1</option>
+ <option value="2">2</option>
+ <option value="3">3</option>
+ <option value="4">4</option>
+ <option value="5">5</option>
+ <option value="6">6</option>
+ <option value="7">7</option>
+ <option value="8">8</option>
+ <option value="9">9</option>
+ <option value="10">10</option>
+ <option value="11">11</option>
+ <option value="12">12</option>
+ 
+</select>
+</body>
+</html>

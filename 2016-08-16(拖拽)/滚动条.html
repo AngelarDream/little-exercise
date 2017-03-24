@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>滚动条</title>
+    <script>
+        window.onload = function(){
+            var oMain = document.getElementsByClassName("main")[0];
+            var oBtn = document.getElementsByTagName("button")[0];
+            var oDiv = document.getElementsByClassName("side-bar")[0];
+            oBtn.onmousedown=function(ev){
+                var Ev = ev||window.event;
+                var PX=0;
+                var PY=0;
+                PX = Ev.clientX - oBtn.offsetLeft;
+                PY = Ev.clientY - oBtn.offsetTop;
+                oBtn.onmousemove= function(ev){
+                    var Ev = ev||window.event;
+                    var l = Ev.clientX-PX;
+                    var t = Ev.clientY-PY;
+                    if(l<0){
+                        l=0;
+                    }else if(l>oDiv.offsetWidth-oBtn.offsetWidth){
+                        l=oDiv.offsetWidth-oBtn.offsetWidth;
+                    }
+                    if(t<0){
+                        t=0;
+                    }else if(t>oDiv.offsetHeight-oBtn.offsetHeight){
+                        t=oDiv.offsetHeight-oBtn.offsetHeight;
+                    }
+                    oBtn.style.left =l+"px";
+                    oBtn.style.top = t+"px";
+                    oMain.style.top = -oBtn.offsetTop+"px";
+
+                };
+                oBtn.onmouseup = function(){
+                    oBtn.onmousemove  = null;
+                    oBtn.onmouseup  = null;
+                };
+            };
+            var img  = document.getElementsByTagName('img');
+            var wrap   = document.getElementsByClassName("wrap")[0];
+            for(var i  = 0;i<img.length;i++){
+                img[i].index  = i;
+                img[i].onclick  = function(){
+                var iDiv  = document.createElement('img');
+                wrap.appendChild(iDiv);
+                iDiv.className = 'img';
+                iDiv.src = img[this.index].src;
+                    iDiv.onclick  = function(){
+                        wrap.removeChild(iDiv);
+                    }
+                };
+            }
+
+        };
+    </script>
+    <style>
+        body{
+            background: #c0c0c0;
+        }
+        .wrap{
+            width: 320px;
+            height:300px;
+            position: relative;
+            margin: 100px auto;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+        .main{
+            width: 300px;
+            position: absolute;
+            left: 0;
+            top:0;
+        }
+        .main img{
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .side-bar{
+            width:19px;
+            height:300px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-left: 1px solid black;
+            background: palegoldenrod;
+        }
+        .side-bar button{
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+        }
+        .img{
+            opacity:1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: sport 6s  0s ;
+        }
+        @keyframes sport {
+            0%{ width: 100px;
+                height:100px;
+                -webkit-transform : rotate(120deg);
+                -moz-transform: rotate(120deg);
+                -ms-transform: rotate(120deg);
+                -o-transform: rotate(120deg);
+                transform: rotate(120deg);}
+            50%{width: 200px ;
+                height:200px;
+                -webkit-transform :rotate(240deg);
+                -moz-transform:rotate(240deg);
+                -ms-transform:rotate(240deg);
+                -o-transform:rotate(240deg);
+                transform:rotate(240deg);}
+            100%{width:300px;
+                height:300px;
+                -webkit-transform :rotate(360deg);
+                -moz-transform:rotate(360deg);
+                -ms-transform:rotate(360deg);
+                -o-transform:rotate(360deg);
+                transform:rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="main">
+        <img src="images/43.jpg" alt=""/>
+        <img src="images/11.jpg" alt=""/>
+        <img src="images/12.jpg" alt=""/>
+        <img src="images/13.jpg" alt=""/>
+        <img src="images/14.jpg" alt=""/>
+        <img src="images/15.jpg" alt=""/>
+        <img src="images/17.jpg" alt=""/>
+        <img src="images/16.jpg" alt=""/>
+        <img src="images/18.jpg" alt=""/>
+        <img src="images/19.jpg" alt=""/>
+        <img src="images/20.jpg" alt=""/>
+        <img src="images/31.jpg" alt=""/>
+        <img src="images/32.jpg" alt=""/>
+        <img src="images/33.jpg" alt=""/>
+        <img src="images/34.jpg" alt=""/>
+        <img src="images/35.jpg" alt=""/>
+        <img src="images/41.jpg" alt=""/>
+        <img src="images/42.jpg" alt=""/>
+    </div>
+    <div class="side-bar">
+        <button></button>
+    </div>
+</div>
+</body>
+</html>

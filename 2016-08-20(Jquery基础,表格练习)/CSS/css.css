@@ -1,0 +1,14 @@
+body{
+    font-size: 13px;
+}
+ul{
+    width:200px
+}
+ul li{
+    list-style: none;
+    padding:0;
+    height: 23px;
+}
+span{
+    padding-left:20px;
+}

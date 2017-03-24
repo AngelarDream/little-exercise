@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+//        var o={};
+//
+//        o.name='hello';
+//        o.prototype.age=30;
+//
+//        console.log(o.age);
+
+        var Book=function(){
+            this.age=40;
+        };
+
+        //Book.prototype.name='hello';  //原型上的属性或着方法在程序段中只用一份。
+
+       Book.prototype.say=function(){
+           return "hello";
+       };
+
+       var b1=new Book();
+           b1.sex='man';
+
+       var b2=new Book();
+           b2.age=60;
+           b2.name='www';
+
+       console.log(b1.say());
+       console.log(b2.say());
+
+       Book.prototype.like=function(){
+           return 'like';
+       };
+
+       Book.prototype={
+           like1:function(){},
+           like2:function(){}
+       };
+
+        console.log(b1.like());
+        console.log(b2.like());
+
+
+//        console.log(b1.name+b1.age+b1.sex);
+//
+//        console.log(b2.name+b2.age+b2.sex);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

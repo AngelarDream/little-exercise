@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>使用CSS 3.0实现动态背景</title>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+body {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 18px;
+	color: #FFF;
+}
+#background {
+    background: url("images/foreground.png") 5% 5%, url("images/midground.png") 50% 50%, url("images/background.png") 90% 110%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    -webkit-transition: left 300s linear;
+}
+#experiment:target #background {
+    left: -5000px;
+}
+#experiment:hover #background {
+    left: -9999px;
+}
+#content {
+    margin: 100px auto 0px auto;
+    width: 700px;
+    height: 150px;
+    background-color: #333;
+    opacity: 0.75;
+    color: #ccc;
+    padding: 40px;
+    border: 2px solid #666;
+}
+#content h2 {
+	font-family: "黑体";
+	font-weight: bold;
+    font-size:  28px;
+	line-height: 48px;
+}
+</style>
+</head>
+<body>
+<DIV id="experiment">
+  <DIV id="background"></DIV>
+  <DIV id="content">
+    <h2>什么是好的网站设计？</h2>
+    <p>　　网站是企业向用户和网民提供信息（包括产品和服务）的一种方式，是企业开展电子商务的基础设施和信息平台，离开网站（或者只是利用第三方网站）去谈电子商务是不可能的。企业的网址被称为“网络商标”，也是企业无形资产的组成部分，而网站是INTERNET上宣传和反映企业形象和文化的重要窗口。</p>
+    <p>　　网页设计的建站包含：企业网站、集团网站、门户网站、电子商务网站等 ，在行业中各自有各自的作用。</p>
+  </DIV>
+</DIV>
+</body>
+</html>

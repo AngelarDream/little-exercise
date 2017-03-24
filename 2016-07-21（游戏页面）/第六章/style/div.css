@@ -1,0 +1,252 @@
+#bg {
+	background-image: url(../images/341.jpg);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 516px;
+	width: 519px;
+	top: 0px;
+	right: 0px;
+}
+#box {
+	width: 743px;
+	position: relative;
+	margin-left: 24px;
+	margin:auto;
+}
+#top {
+	text-align: center;
+	height: 30px;
+	width: 739px;
+	margin-top: 16px;
+	color: #A8AFB2;
+}
+#banner {
+	background-image: url(../images/342.gif);
+	background-repeat: no-repeat;
+	height: 276px;
+	width: 743px;
+}
+#left {
+	float: left;
+	height: 622px;
+	width: 170px;
+	margin-left: 8px;
+	position: absolute;
+	top: -21px;
+	margin-top: 320px;
+}
+#fragen {
+	line-height: 16px;
+	height: 181px;
+	width: 170px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #909BA0;
+}
+#form {
+	height: 193px;
+	width: 170px;
+	margin-top: 8px;
+}
+#pic {
+	text-align: center;
+	height: 182px;
+	width: 170px;
+}
+#main {
+	float: left;
+	height: 714px;
+	width: 529px;
+	margin-top: 320px;
+	position: absolute;
+	top: -113px;
+	margin-left: 214px;
+}
+#star1 {
+	background-image: url(../images/346.gif);
+	background-repeat: no-repeat;
+	height: 60px;
+	width: 304px;
+}
+#star2 {
+	background-image: url(../images/347.gif);
+	background-repeat: no-repeat;
+	height: 115px;
+	width: 508px;
+}
+#car1 {
+	line-height: 16px;
+	height: 128px;
+	width: 529px;
+	margin-top: 17px;
+}
+#car2 {
+	line-height: 16px;
+	height: 128px;
+	width: 529px;
+}
+#car3 {
+	line-height: 16px;
+	height: 128px;
+	width: 529px;
+}
+#car4 {
+	line-height: 16px;
+	height: 128px;
+	width: 529px;
+}
+#bottom {
+	line-height: 16px;
+	background-image: url(../images/348.gif);
+	background-repeat: no-repeat;
+	text-align: right;
+	clear: left;
+	height: 38px;
+	width: 650px;
+	padding-top: 40px;
+	padding-right: 93px;
+	position: absolute;
+	top: 922px;
+}
+#right {
+	position: absolute;
+	height: 226px;
+	width: 45px;
+	left: 1082px;
+	top: 53px;
+	background-image: url(../images/345.gif);
+	background-repeat: no-repeat;
+}
+#top span {
+	font-size: 7px;
+	color: #B2E84B;
+	margin-right: 8px;
+	margin-left: 8px;
+}
+#logo {
+	background-image: url(../images/343.gif);
+	background-repeat: no-repeat;
+	height: 63px;
+	width: 126px;
+	margin-top: 12px;
+	margin-left: 1px;
+	float: left;
+}
+#menu {
+	line-height: 30px;
+	float: right;
+	height: 63px;
+	width: 190px;
+	margin-top: 12px;
+	color: #C7E6F5;
+}
+#menu li {
+	float: left;
+	margin-left: 12px;
+	list-style-type: none;
+}
+#wen1 {
+	clear: both;
+	float: left;
+	height: 35px;
+	width: 112px;
+	margin-top: 16px;
+	line-height: 35px;
+	color: #00B3EB;
+	padding-left: 15px;
+}
+#wen2 {
+	font-family: "黑体";
+	font-size: 24px;
+	font-style: italic;
+	font-weight: bold;
+	color: #3059ae;
+	float: right;
+	height: 35px;
+	width: 448px;
+	margin-top: 16px;
+	clear: right;
+
+}
+#f_name,#f_mail,#f_tel {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #53B3E2;
+	height: 18px;
+	width: 170px;
+	margin-bottom: 5px;
+	border: 1px solid #8F999B;
+}
+#f_anfrage {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #53B3E2;
+	height: 80px;
+	width: 170px;
+	margin-bottom: 5px;
+	border: 1px solid #8F999B;
+}
+#car1 img {
+	float: right;
+	margin-left: 25px;
+	margin-top: 28px;
+}
+#car1 h2 {
+	font-size: 17px;
+	color: #8FCF13;
+	background-image: url(../images/356.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	padding-bottom: 8px;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+#car2 img {
+	float: right;
+	margin-left: 25px;
+	margin-top: 28px;
+}
+#car2 h2 {
+	font-size: 17px;
+	color: #8FCF13;
+	background-image: url(../images/356.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	padding-bottom: 8px;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+#car3 img {
+	float: right;
+	margin-left: 25px;
+	margin-top: 28px;
+}
+#car3 h2 {
+	font-size: 17px;
+	color: #8FCF13;
+	background-image: url(../images/356.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	padding-bottom: 8px;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+#car4 img {
+	float: right;
+	margin-left: 25px;
+	margin-top: 28px;
+}
+#car4 h2 {
+	font-size: 17px;
+	color: #8FCF13;
+	background-image: url(../images/356.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	padding-bottom: 8px;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-left: 0px;
+}

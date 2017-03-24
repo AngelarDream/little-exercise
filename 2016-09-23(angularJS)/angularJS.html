@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="AngularJS/angular.min.js"></script>
+    <script>
+        var myModule = angular.module("myModule",[]);
+        myModule.directive("hello",function(){
+            return{
+                restrict:"AEMC",
+                template:"<div>HI I am angel</div>",
+                replace:true
+            }
+        });
+    </script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript"></script>
+</head>
+<body ng-app="myModule">
+<!--推荐使用元素和属性的指令-->
+    <hello></hello>
+    <div hello></div>
+    <div class="hello"></div>
+    <!--directive:hello-->
+    <div></div>
+{{"刘梦煜"}}
+</body>
+</html>

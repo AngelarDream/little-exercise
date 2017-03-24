@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+//        定义一个父类
+        var person = function(name,position){
+            this.name = name;
+            this.position = position;
+            this.address = "西安石油大学"
+        }
+//        定义父类原型方法
+        person.prototype.return=function(){
+            return this;
+        }
+//        定义子类
+        var student = function(name,position){
+            person.call(this,name,position)
+        };
+        var teacher = function(name,position){
+            person.call(this,name,position)
+        };
+//        通过子类继承父类
+        student.prototype = new  person();
+        teacher.prototype = new person();
+//        增加原型方法
+        var stu = new student("刘梦煜","学生");
+        var tea = new teacher("张洁","老师");
+        console.log(stu);
+        console.log(tea);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

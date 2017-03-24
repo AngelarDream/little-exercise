@@ -1,0 +1,41 @@
+#search {
+	background-image: url(../images/816.gif);
+	background-repeat: no-repeat;
+	text-align: left;
+	height: 51px;
+	width: 364px;
+	padding-top: 15px;
+	padding-left: 156px;
+	margin-top: 100px;
+	padding-right: 27px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#search_photo {
+	margin-left: 35px;
+}
+#search_list1,#search_list2 {
+	font-family: "ËÎÌו";
+	font-size: 12px;
+	line-height: 18px;
+	color: #343434;
+	height: 18px;
+	width: 60px;
+	margin-top: 3px;
+	border: 1px solid #B4B4B4;
+}
+#search_list3 {
+	font-family: "ËÎÌו";
+	font-size: 12px;
+	line-height: 18px;
+	color: #343434;
+	height: 18px;
+	width: 70px;
+	margin-top: 3px;
+	border: 1px solid #b3b3b3;
+}
+#button {
+	float: right;
+	margin-top: 2px;
+}

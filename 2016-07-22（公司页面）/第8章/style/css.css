@@ -1,0 +1,40 @@
+/* CSS Document */
+
+body { 
+margin:0px;
+border:0px;
+padding:0px;
+font-size:12px;
+background-color:#f4ebdc;
+}
+
+ul li {
+    margin:0px;
+	padding-left:6px;
+	padding-right:6px;
+	list-style:none;
+	float:left;
+}
+
+a {
+text-decoration:none;
+color:#000000;
+}
+.pic {
+float:left;
+padding:10px;
+}
+
+.text-2 {
+	font-weight:bold;
+	color:#CC3333;
+	text-decoration:underline;
+	line-height:24px;
+}
+
+.text-3 {
+margin-left:240px;
+}
+#right img {
+	margin-top:20px;
+}

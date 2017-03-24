@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>了解Jquery-2</title>
+    <script type="text/javascript" src="JS-frame/jquery-3.1.0.min.js"></script>
+    <script>
+        $(function(){
+//            定义变量
+            var $allInput = $(".last input");
+            var $input = $("tr input").not($allInput);
+            var $Input = $("input");
+//            逐行变色
+            $("tr:even").css("background","#ccc");
+//            点击全选按钮事件
+            $allInput.click(function(){
+                if(this.checked){
+                    $input.attr("checked",true);
+                }
+                else{
+                    $input.attr("checked",false);
+                }
+            });
+//            点击删除被选中的行
+            $("button").click(function(){
+                if($input.is(":checked")){
+                    $input.each(function(){
+                        if(this.checked){
+                            console.log((this.parentNode).parentNode);
+                            (this.parentNode).parentNode.remove();
+                        }
+                    })
+                }
+         });
+//            图片放大效果
+            var $div = $(".pic");
+            var $img = $(".pic img");
+            var $allImg = $("img").not($img);
+            $allImg.mousemove(function(e){
+                $div.show().css({"left":e.pageX,"top":e.pageY});
+                $img.attr("src",this.src);
+            })
+                .mouseout(function(){
+                    $div.hide();
+            })
+        })
+    </script>
+</head>
+<style>
+    body{
+        position: relative;
+    }
+    table{
+        border-collapse:collapse ;
+    }
+    table td{
+        width: 80px;
+        height: 130px;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid #909BA0;
+
+    }
+    table img{
+        width: 60px;
+        height: 110px;
+    }
+    .first td{
+        width: 80px;
+        height:50px;
+    }
+    .last td{
+        text-align: left;
+        height:30px;
+
+    }
+    .pic{
+        position: absolute;
+        display: none;
+    }
+    .pic img{
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<body>
+<table>
+    <tr class="first">
+        <td>选项</td>
+        <td>编号</td>
+        <td>封面</td>
+        <td>购书人</td>
+        <td>性别</td>
+        <td>购书价</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>1001</td>
+        <td><img src="images/3.png"></td>
+        <td>李晓明</td>
+        <td>男</td>
+        <td>35.6元</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>1002</td>
+        <td><img src="images/4.jpg"></td>
+        <td>刘明明</td>
+        <td>女</td>
+        <td>37.5元</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>1003</td>
+        <td><img src="images/5.jpg"></td>
+        <td>张晓星</td>
+        <td>女</td>
+        <td>45.6元</td>
+    </tr>
+    <tr class="last">
+        <td colspan="6">
+            <input type="checkbox">
+            <label>全选</label>
+            <button>删除</button>
+        </td>
+    </tr>
+</table>
+<div class="pic">
+    <img src="images/3.png">
+</div>
+</body>
+</html>

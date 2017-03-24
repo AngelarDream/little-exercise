@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>QQ聊天</title>
+    <script src="js/sportFrame.js" type="text/javascript"></script>
+    <script>
+    window.onload = function () {
+        //切换卡
+        var oLis = document.getElementsByClassName('lis1');
+        var oNav = document.getElementsByClassName('nav');
+        var oLi = oNav[0].getElementsByTagName('li');
+        var oSpan =document.getElementsByTagName('span');
+        for (var j = 0; j < oLi.length; j++) {
+            oSpan[j].className = 'close';
+            oLi[j].index = j;
+            oLi[j].onclick = function () {
+                for (var j = 0; j < oLi.length; j++) {
+                    oLis[j].style.display = 'none';
+                }
+                oLis[this.index].style.display = 'block';
+            }
+         }
+        var oMain = document.getElementById('main');
+        var oUl = oMain.getElementsByTagName('ul');
+        for(var i=0;i<oSpan.length;i++){
+            oSpan[i].index=i;
+            oSpan[i].className = 'close';
+            oSpan[i].onclick = function() {
+                if (parseInt(styleSetGet(oUl[this.index], 'height')) == 0) {
+                    for (var i = 0; i < oSpan.length; i++){
+                        oUl[i].style.height = 0;
+                    oSpan[i].className = 'close';
+                }
+                oSpan[this.index].className = 'open';
+                sportFrame(oUl[this.index], 'height', 60);
+            }
+                else{
+                    sportFrame(oUl[this.index],'height',0);
+                    oSpan[this.index].className = 'close';
+                }
+            }
+        }
+        var oTop = document.getElementsByClassName("top");
+        var oSidebar = document.getElementsByClassName("sidebar");
+        console.log(oTop);
+        console.log(oSidebar);
+        oTop.onclick = function(){
+            sportFrame(oSidebar,'height',100);
+        }
+    };
+//        头像部分
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            border:0;
+            list-style: none;
+        }
+        .box{
+            width: 279px;
+            margin: 100px auto;
+            border: 1px solid #999999;
+            position: relative;
+        }
+        .top{
+            width: 279px;
+            height: 138px;
+            background: url("images/qq.PNG") no-repeat;
+        }
+        .top input{
+            width: 279px;
+            height: 30px;
+            padding-left: 10px;
+            position: relative;
+            top: 108px;
+            background:linear-gradient(green,cadetblue);
+            color: #ffffff;
+        }
+        .nav{
+            width: 279px;
+            text-align: center;
+            background:-moz-radial-gradient(cornflowerblue,#cccccc);
+        }
+        .nav li{
+            line-height: 30px;
+            display: inline-block;
+            width:88px;
+            border-right: 1px solid #cccccc ;
+        }
+        .lis1{
+            width: 100%;
+            height: 400px ;
+            background:rgba(232,245,253,1);
+            font-size: 12px;
+            display: none;
+        }
+        .lis1 ul{
+            width: 100%;
+            height:0;
+            overflow: hidden;
+        }
+        .lis1 li{
+            line-height:15px;
+            height:15px;
+            width: 100%;
+            padding-top: 5px;
+            vertical-align: middle;
+        }
+        .lis1 li img{
+            height: 10px;
+            width: 10px;
+            padding:0 10px;
+        }
+        /*JS样式*/
+        .close{
+            display: block;
+            height: 31px;
+            width: 100%;
+            line-height: 21px;
+            padding-left:26px;
+            padding-top: 10px;
+            background: url("images/qq2.PNG") no-repeat 0 6px;
+            font: bold 14px '黑体';
+        }
+        .open{
+            display: block;
+            width: 100%;
+            line-height: 21px;
+            height:21px;
+            padding-left:26px;
+            padding-top: 10px;
+            background: url("images/qq6.PNG") no-repeat 0 6px;
+            font: bold 14px '黑体';
+        }
+        .hide{
+            display: none;
+        }
+        .sidebar{
+            width: 150px;
+            border-radius:150px;
+            background: url("images/1.jpg") no-repeat;
+            position: absolute;
+            left: -170px;
+            top: 10px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="top">
+            <input type="search" value="搜索联系人，讨论组，企业好友" name="search">
+        </div>
+        <ul class="nav">
+            <li>QQ好友</li>
+            <li>企业好友</li>
+            <li>讨论组</li>
+        </ul>
+        <div id="main">
+            <div class="lis1" style="display: block">
+                <span>朋友</span>
+                <ul>
+                    <li><img src="images/qq3.PNG">张三（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq3.PNG">张三（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq3.PNG">张三（个性签名，QQ空间，欢迎添加好友）</li>
+                </ul>
+                <span>家人</span>
+                <ul>
+                    <li><img src="images/qq4.PNG">李四（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq4.PNG">李四（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq4.PNG">李四（个性签名，QQ空间，欢迎添加好友）</li>
+                </ul>
+                <span>同学</span>
+                <ul>
+                    <li><img src="images/qq5.PNG">王五（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq5.PNG">王五（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq5.PNG">王五（个性签名，QQ空间，欢迎添加好友）</li>
+                </ul>
+            </div>
+            <div class="lis1">
+                <span>空间</span>
+                <ul>
+                    <li><img src="images/qq3.PNG">张三（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq3.PNG">张三（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq3.PNG">张三（个性签名，QQ空间，欢迎添加好友）</li>
+                </ul>
+                <span>亲朋好友</span>
+                <ul>
+                    <li><img src="images/qq4.PNG">李四（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq4.PNG">李四（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq4.PNG">李四（个性签名，QQ空间，欢迎添加好友）</li>
+                </ul>
+                <span>奥斯卡</span>
+                <ul>
+                    <li><img src="images/qq5.PNG">王五（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq5.PNG">王五（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq5.PNG">王五（个性签名，QQ空间，欢迎添加好友）</li>
+                </ul>
+                </div>
+            <div class="lis1">
+                <span>关注</span>
+                <ul>
+                    <li><img src="images/qq3.PNG">张三（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq3.PNG">张三（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq3.PNG">张三（个性签名，QQ空间，欢迎添加好友）</li>
+                </ul>
+                <span>朋友圈</span>
+                <ul>
+                    <li><img src="images/qq4.PNG">李四（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq4.PNG">李四（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq4.PNG">李四（个性签名，QQ空间，欢迎添加好友）</li>
+                </ul>
+                <span>特别关心</span>
+                <ul>
+                    <li><img src="images/qq5.PNG">王五（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq5.PNG">王五（个性签名，QQ空间，欢迎添加好友）</li>
+                    <li><img src="images/qq5.PNG">王五（个性签名，QQ空间，欢迎添加好友）</li>
+                </ul>
+                </div>
+        </div>
+        <div class="sidebar"></div>
+    </div>
+</body>
+</html>

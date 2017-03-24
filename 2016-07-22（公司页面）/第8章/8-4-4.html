@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>使用CSS 3.0实现可折叠栏目</title>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+body {
+	font-family: 宋体;
+	font-size: 12px;
+	color: #333333;
+	line-height: 20px;
+	background-image: url(images/84402.jpg);
+	background-repeat: repeat-x;
+	background-color: #E1E1E1;
+}
+#top {
+	width: 960px;
+	height: 182px;
+	background-image: url(images/84401.jpg);
+	background-repeat: no-repeat;
+	margin: 0px auto;
+	text-align: center;
+	padding-top: 29px;	
+}
+#main img {
+	vertical-align: middle;
+	margin-right: 10px;
+}
+#main a{
+	display: block;
+	height: 40px;
+	background-color: #D4D4D4;
+	border-bottom: 1px solid #E1E1E1;
+	font-family: 黑体;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	line-height: 40px;
+	text-decoration: none;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+#main a:hover{
+	background-color: #E1E1E1;
+	border-bottom:  1px solid #FFFFFF;
+}
+#main div{
+	height: 0px;
+	overflow: hidden;
+	background-image: url(images/84405.gif);
+	background-repeat: repeat-x;
+	background-color: #FFFFFF;
+	padding-left: 10%;
+	padding-right: 10%;
+	-webkit-transition: height 600ms ease;
+}
+#main div p{
+	padding: 20px;
+}
+#main div:target{
+	height:150px;
+}
+
+</style>
+</head>
+<body>
+<div id="top"><img src="images/84403.png" width="598" height="150" /></div>
+<div id="main"><a href="#first"><img src="images/84404.png" width="12" height="12" />关于我们设计室</a>
+  <div id="first"><p>　　新势力数码互动是专注于高品质多媒体互动制作的全方位互动营销公司，同时也拥有实力雄厚的技术研发团队、顶尖素养的设计团队及思维活跃的数字营销运营团队，新势力数码互动（ideaDun Interactive）一直致力于建立更多更好的互联网实用性品牌形象，提供权威专业的互联网品牌策划，并实施高标准、高回报的营销推广方案，创造真正意义上的营销型品牌网站，为互联网品牌在互动行销领域创造最大价值而不懈努力！<br />
+　　新势力数码互动的宗旨是为客户量身打造一站式品牌互动管家。我们致力于个性化产品的发掘和提升，我们提供从高端网站咨询与建设、电子商务策划运营、数字互动营销策划、媒介广告代理投放、网站SEO优化、互动创意设计、淘宝店铺高端定制、VI设计、3D网站建设、3D虚拟展厅等一系列专业服务。
+</p></div>
+  <a href="#second"><img src="images/84404.png" width="12" height="12" />我们的服务</a>
+  <div id="second"><p>　　数字互动营销——基于用户中心的理论，经验设计的指导，我们在为客户量身打造一整套在线营销的利器及解决方案。<br />
+  　　网站建设——新势力数码互动顶尖的互动创意团队为您度身定造互动营销型网站建设，让视觉力量极致发挥出对品牌的影响力。<br />
+  　　3D虚拟仿真体验——网络3D视觉展示技术，美幻互动的虚拟仿真世界！企业3D虚拟新型营销工具，让科技创所未想，无限互动想像。<br />
+  　　SEO搜索引擎优化——搜索引擎优化就是让网站在搜索引擎百度中获得较好的排名，提高网站曝光率，从而赢得更多潜在客户的一种网络营销(IM)方式。</p></div>
+  <a href="#third"><img src="images/84404.png" width="12" height="12" />如何联系我们</a>
+  <div id="third"><p>　　亲爱的朋友，感谢你来Web新势力的网站。如果你有什么意见建议想对我们说，都可以通过下面的方式发送信息给我们。我们将非常乐意跟你畅快的交流！<br />
+  　　ADD：北京市海淀区海河南二丰路兴广场和兴1001室<br />
+  　　TEL：400-000-0000 ( 全国免费咨询热线 )<br />
+  　　FAX：86-010-11111111 ( 业务传真 )<br />
+  　　E-Mail：wb@163.com</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/sportFrame.js"></script>
+    <script>
+        window.onload=function(){
+            var oBox=document.getElementById('box');
+            var oUl=oBox.getElementsByTagName('ul')[0];
+            var aLi=oBox.getElementsByTagName('li');
+            var aBtn=oBox.getElementsByTagName('button');
+            var timer = null;
+            var  len=aLi.length;
+            var  count = 0;
+            var m = 0;
+            for(var i=0;i<len;i++)
+            {
+                aBtn[i].index=i;
+                aBtn[i].onclick=function(){
+                    for(var i=0;i<aBtn.length;i++)
+                    {
+                        aBtn[i].className='';
+                    }
+                    aBtn[this.index].className='active';
+                    count=m=this.index;
+                    sportFrame(oUl,'left',-400*count);
+                };
+
+            }
+            timer = setInterval(function(){
+                if(count<len) {
+                    for(var i=0;i<len;i++)
+                    {
+                        aBtn[i].className='';
+                    }
+                    aBtn[count].className='active';
+                    sportFrame(oUl, 'left', -400 * count);
+                    count++;
+                    m++;
+
+                }
+                else{
+                    if(m>0){
+                        --m;
+                        for(var i=0;i<len;i++)
+                        {
+                            aBtn[i].className='';
+                        }
+                        aBtn[m].className='active';
+                        sportFrame(oUl, 'left', -400 * m);
+                    }
+                    else{
+                        count=0;
+                        m=0;
+                    }
+                }
+            },1000);
+        };
+    </script>
+    <style>
+        *{ padding: 0;
+            margin: 0;
+            border: 0;}
+        #box { width: 400px;
+                height: 200px;
+                background: navajowhite;
+                position: relative;
+                left: 40%;
+                top: 100px;
+                overflow: hidden;
+                }
+        #box img {width: 400px;
+                  height: 200px;
+                  }
+        #box ul { list-style: none;
+                  width: 1600px;
+                  position: absolute;
+                  left: 0;
+                   top: 0;}
+        #box li{ float: left;}
+        button{ width: 30px;
+                height: 30px;
+                border-radius: 25px;
+                background:#999999;
+                }
+        #btngroup{position: absolute;
+                  right: 50px;
+                  bottom: 20px;}
+        .active{ background: chocolate;}
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <li><img src="images/4.jpg"></li>
+            <li><img src="images/5.jpg"></li>
+            <li><img src="images/6.jpg"></li>
+            <li><img src="images/7.jpg"></li>
+        </ul>
+        <div id="btngroup">
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+        </div>
+    </div>
+</body>
+</html>

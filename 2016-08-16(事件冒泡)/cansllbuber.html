@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html onclick="javascript:alert('html')">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //事件冒泡：
+    </script>
+   <style>
+       #div1 { width: 400px;
+                height: 400px;
+                background: #00CC66;
+       }
+       #div2{ width: 200px;
+             height: 200px;
+             background: #66ff00;
+       }
+   </style>
+</head>
+<body onclick="javascript:alert('body')">
+    <div id="div1" onclick="javascript:alert('div1')">
+        <div id="div2" onclick="javascript:alert('div2')"></div>
+    </div>
+</body>
+</html>

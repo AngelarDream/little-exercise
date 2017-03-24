@@ -1,0 +1,4 @@
+.nav{width:784px;height: 18px;margin:8px auto;background: #3b5998;padding: 8px}
+.nav ul li{position:relative;list-style: none;float:left;width:80px;margin-right:10px;text-align: center;z-index: 100}
+.nav ul li a{ font-weight: 700;display: block;background: #EEEEEE;}
+.nav ul li ul{background: #88c366;width:80px;display: none;position:absolute}

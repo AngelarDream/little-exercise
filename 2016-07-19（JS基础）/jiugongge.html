@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>九宫格</title>
+    <meta name="keywords" content="关键1，关键词2">
+    <meta name="description" content="描述">
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            border:0;
+        }
+        #box{
+            width: 906px;
+            margin: 100px auto;
+        }
+        #box ul{
+            list-style: none;
+        }
+        #box ul li{
+            display: inline-block;
+            width:280px;
+            height:210px;
+        }
+        /*JS样式 */
+        .pic{
+            opacity: 0.3
+        }
+    </style>
+    <script>
+
+       window.onload = function() {
+           var oli = document.getElementsByTagName("li");
+           for (var i = 0; i < oli.length; i++) {
+               oli[i].onmouseover = function () {
+                   for (var j = 0; j < oli.length; j++) {
+                       oli[j].className = "pic";
+                       this.className = "";
+                   }
+               }
+
+           }
+       }
+    </script>
+</head>
+
+<body>
+<div id="box">
+    <ul>
+        <li><img src="images/6.jpg"/></li>
+        <li><img src="images/6.jpg"  /></li>
+        <li><img src="images/6.jpg" /></li>
+        <li><img src="images/6.jpg"  /></li>
+        <li><img src="images/6.jpg"  /></li>
+        <li><img src="images/6.jpg" /></li>
+        <li><img src="images/6.jpg"  /></li>
+        <li><img src="images/6.jpg"  /></li>
+        <li><img src="images/6.jpg" /></li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+}
+/*总体框架*/
+.top{
+    height: 218px;
+    width: 1003px;
+    background: url("images/501.jpg") no-repeat;
+}
+.main_menu{
+    width: 1003px;
+    height: 37px;
+    background: url("images/502.gif") repeat-y;
+    text-align: center;
+}
+.main{
+    width: 1200px;
+    margin-left: 12px;
+}
+.bottom{
+    width:100%;
+    clear:both;
+    text-align: center;
+}
+/*顶部样式*/
+.logo{
+    background: url("images/512.gif");
+    width: 119px;
+    height: 67px;
+    margin: 10px 50px;
+    float: left;
+}
+.top_menu{
+    width:295px;
+    height: 51px;
+    float: left;
+}
+.top_menu img{
+    width: 58px;
+    height: 51px;
+}
+/*主菜单样式*/
+.main_menu img{
+    width: 2px;
+    height: 10px;
+    margin: 13px 10px 0 10px;
+}
+/*主体样式*/
+.main_left{
+    width: 219px;
+    background: url("images/504.gif") repeat-x;
+    position:relative;
+    top: -123px;
+    float: left;
+}
+.flash{
+    width: 219px;
+    height: 178px;
+    background: url("images/505.gif") no-repeat;
+}
+.login{
+    background: url("images/506.gif")no-repeat;
+    width: 210px;
+    padding-top: 60px;
+    /*line-height: 30px;*/
+    color: #2A558A;
+}
+.login form{
+    text-align: left;
+    margin-left: 12px;
+    float:left;
+}
+.login form label{
+    width: 40px;
+    height: 10px;
+    display: inline-block;
+    /*vertical-align: middle;*/
+}
+.login form input{
+    width:60px;
+}
+.btn1{
+    height: 40px;
+    width: 57px;
+    margin:10px 0 0 20px;
+}
+.login input{
+    width: 70px;
+    border: 1px solid #527690;
+    font:12px "宋体";
+    color: #666666;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.notice{
+    background-color: #FFFFFF;
+    width: 208px;
+    text-align: left;
+}
+.notice image{
+    position: relative;
+    top: 20px;
+}
+.notice li {
+    line-height: 20px;
+    background: url(images/522.gif) no-repeat 16px;
+    text-indent: 24px;
+    list-style-type: none;
+}
+.main_right{
+    float: left;
+    height: 598px;
+    width: 800px;
+    margin-top: 2px;
+}
+.div1{
+    width: 201px;
+    height: 238px;
+    background: url("images/508.gif") no-repeat;
+    float: left;
+
+}
+.div1 li{
+    background: url("images/534.gif")no-repeat 12px;
+    list-style: none;
+    line-height: 22px;
+    text-indent: 18px;
+    color: #333333;
+}
+.div2{
+    width: 129px;
+    height: 238px;
+    background: url("images/509.gif") repeat-x;
+    float: left;
+
+}
+.div2 li{
+    background: url("images/534.gif")no-repeat 12px;
+    list-style: none;
+    line-height: 22px;
+    text-indent: 18px;
+    color: #333333;
+}
+.div3{
+    width: 131px;
+    height: 238px;
+    background: url("images/510.gif") repeat-x;
+    float: left;
+
+}
+.div3 li{
+    background: url("images/534.gif")no-repeat 12px;
+    list-style: none;
+    line-height: 22px;
+    text-indent: 18px;
+    color: #333333;
+}
+.div4{
+    width: 124px;
+    height: 238px;
+    background: url("images/509.gif") repeat-x;
+    float: left;
+
+}
+.div4 li{
+    background: url("images/534.gif")no-repeat 12px;
+    list-style: none;
+    line-height: 22px;
+    text-indent: 18px;
+    color: #333333;
+}
+.shop{
+    /*text-align: center;*/
+    float: left;
+    height: 190px;
+    width: 300px;
+    margin-top: 17px;
+    margin-left: 8px;
+}
+.shop_title{
+    text-align: left;
+    height: 19px;
+    width: 298px;
+    padding-top: 4px;
+
+    border: 1px solid #D5E0E6;
+}
+.shop_title img:nth-child(2){
+    margin-right: 5px;
+    margin-left: 130px;
+}
+.div5_1{
+    line-height: 20px;
+    float: left;
+    height: 157px;
+    width: 96px;
+    margin-top: 10px;
+}
+.div6_game{
+    height: 65px;
+    width: 300px;
+    margin-top: 10px;
+    border-bottom: 1px dashed #CCCCCC;
+    float: left;
+}
+.div6_game img{
+    margin-right: 6px;
+    float: left;
+}
+.game_list{
+    list-style: none;
+    float: left;
+    width: 190px;
+}
+.game_list li {
+    line-height: 20px;
+    height: 20px;
+}
+.game_list li span{
+    text-align: right;
+    display: block;
+    float: right;
+}
+.game_pic{
+    width: 93px;
+    float: right;
+    margin-top: 10px;
+}
+.help_list img{
+    clear: both;
+    width: 86px;
+    height: 88px;
+    margin-top: 10px;
+}
+.bottom_menu{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    background: url("images/511.gif") repeat-x;
+    clear: both;
+    padding-left: 112px;
+}
+.bottom_menu select{
+    border: 1px solid black;
+    margin-left: 100px;
+    width: 100px;
+}
+
+
+
+

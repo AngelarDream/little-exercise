@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    background-color: #f4ebdc;
+    font-size: 12px;
+}
+.pic {
+    float:left;
+    padding:10px;
+}
+
+.text-2 {
+    font-weight:bold;
+    color:#CC3333;
+    text-decoration:underline;
+    line-height:24px;
+}

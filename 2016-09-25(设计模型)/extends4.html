@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function inheritObject(o)
+        {
+            function F(){}  //空对象
+
+            F.prototype=o;   //原型继承
+
+            return new F();  //继承后的对象
+        }
+
+
+        var book={
+            name:"jsbook",
+            alikeBook:['css','html']
+        };
+
+        var newBook1=inheritObject(book);
+
+       // alert(newBook1.name);
+
+        newBook1.name='hello';
+        newBook1.alikeBook.push('xml');
+
+        var newBook2=inheritObject(book);
+        newBook2.name='hello111';
+        newBook2.alikeBook.push('xml111');
+
+        alert(newBook1.name);
+        alert(newBook1.alikeBook);
+
+        alert(newBook2.name);
+        alert(newBook2.alikeBook);
+
+        alert(book.name);
+        alert(book.alikeBook);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

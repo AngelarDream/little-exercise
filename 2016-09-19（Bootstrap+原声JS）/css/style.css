@@ -1,0 +1,27 @@
+/*样式重置*/
+html,body,div,h4{padding:0;margin:0;border:0;}
+/*主体样式*/
+.top{padding:30px 0 20px;text-align: center}
+.top img{height: 40px;}
+.top span{margin-top:18px;}
+.hr{height:2px;background:#008000;}
+.progressBar{width:1260px;margin:40px auto;}
+.progressBar div{padding-bottom: 20px;border-bottom: 4px solid #999;}
+.main{margin:180px 0;display: none}
+.form-group{height: 32px;line-height: 32px;text-align: left}
+.form-group label{text-align: right}
+.footer{position:fixed;bottom:0;width:100%;background: #4d4d4d;height:40px;line-height: 40px;}
+/*样式优化*/
+.leftBorder{border-left:1px solid #000000;}
+.marginTop{margin-top:24px;}
+.text-center{width:100%;text-align: center}
+.text{width:100%;text-align: left;height:32px;line-height:32px;}
+.bg{background:#f0f0f0;}
+.select{padding:4px 0;margin:4px 0 0 15px;border:1px solid #999;border-radius:4px;}
+/*字体样式*/
+.font01{font:600 16px "微软雅黑";}
+.font02{font-size:12px;}
+.font03{color: red;}
+.font04{color: #e6e6e6;font-size: 12px;}
+.font05{font-size: 11px;color:#999}
+/*JS样式*/

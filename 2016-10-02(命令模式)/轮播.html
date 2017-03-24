@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>轮播器</title>
+    <script>
+        //图片轮播器
+        //图片轮播类
+        var LoopImages=function(imgArr,container){
+            this.imagesArray=imgArr;  //轮播图片组
+            this.container=container; //轮播图片容器
+        };
+        LoopImages.prototype={
+            createImage:function(){
+                return "create image";
+            },
+            changeImage:function(){
+                return "change Image";
+            }
+        };
+        //上下切换图片
+        var  SlideLoopImage=function(imgArr,container){
+            LoopImages.call(this,imgArr,container);
+        };
+
+        SlideLoopImage.prototype=new LoopImages();
+
+        SlideLoopImage.prototype.changeImage=function()
+        {
+            return "slide image";
+        };
+        //渐隐切换图片
+        var FadeLoopImage=function(imgArr,container,arrow){
+            LoopImages.call(this,imgArr,container);
+            this.arrow=arrow;
+        };
+        FadeLoopImage.prototype=new LoopImages();
+
+        FadeLoopImage.prototype.changeImage=function(){
+            return "fade image";
+        }
+
+        //实例化渐隐切换图片对象
+        var  fadeImg=new FadeLoopImage(
+                ['01.jpg','02.jpg','03.jpg','04.jpg'],'slide',['left.jpg','right.jpg']
+        );
+
+        alert(fadeImg.changeImage());
+
+    </script>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>

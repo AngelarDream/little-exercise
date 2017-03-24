@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload=function(){
+	var aBtn=document.getElementsByTagName('input');
+	var aDiv=document.getElementsByTagName('div');
+	
+	for(var i=0;i<aBtn.length;i++)
+	{
+	   aBtn[i].index=i;  //给元素加索引（自定义属性）
+	   aBtn[i].onclick=function(){    //给每个按钮加点击事件
+		   
+		  this.className='active';    //当前对象
+		  aDiv[this.index].style.display='block'; 
+	   };	
+		
+	}
+	
+};
+</script>
+<style>
+div{ width:200px;
+	 height:200px;
+	 background:#ccc;
+	 display:none;
+	 border-radius:10px;}
+
+.active { background:#F90;}
+</style>
+</head>
+
+<body>
+<input type="button" value="热点" class="active">
+<input type="button" value="新闻">
+<input type="button" value="军事">
+<input type="button" value="娱乐">
+<div style="display:block;">1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+</body>
+</html>

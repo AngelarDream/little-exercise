@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementsByTagName('div')[0];
+
+            var str="";
+            oDiv.innerHTML="验证码";
+            //生成验证码
+
+            for(var i=0;i<4;i++)
+            {
+                str+=''+Math.round(Math.random()*9);
+
+            }
+
+            oDiv.innerHTML=str;
+
+
+
+        };
+    </script>
+</head>
+<body>
+    <form>
+        <label for="username">用户名:</label>
+        <input type="text" id="username" name="username"><br>
+        <label for="userpwd">密码:</label>
+        <input type="password" id="userpwd" name="userpwd"><br>
+        <label for="checkcord">验证码</label>
+        <input type="text" id="checkcord" name="checkcord">
+        <div style="width: 100px;height: 50px; background: moccasin;"></div><br>
+        <input type="submit" value="登录">
+        <input type="reset" value="取消">
+    </form>
+</body>
+</html>

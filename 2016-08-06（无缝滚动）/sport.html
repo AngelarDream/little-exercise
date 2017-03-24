@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var  oBox=document.getElementById('box');
+
+            sportFrame(oBox,100);
+
+        };
+
+
+        var  timer=null;
+
+        function sportFrame(obj,end)
+        {
+            var speed=10;
+            if(end-obj.offsetLeft>0)
+            {
+               speed=10;
+            }
+            else
+            {
+                speed=-10;
+            }
+
+            timer=setInterval(function(){
+                obj.style.left=obj.offsetLeft+speed+'px';
+            },30);
+
+        }
+    </script>
+    <style>
+        #box {  width: 200px;
+                height: 200px;
+                position: absolute;
+                 left: 800px;
+                background: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

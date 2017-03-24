@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //内置对象 日期
+//        var date=new  Date();
+//
+//        alert(date.getFullYear()); //获取当前日期的年份
+//        alert(date.getMonth()+1);    //获取月份 从0开始计算月份
+//        alert(date.getDay());        //获取日期(周天)  周日为0
+//        alert(date.getDate());       //获取当前日期 日（号）
+//        alert(date.getYear());       //第多少年   116--(1900 开始)
+        function toTwo(a)
+        {
+            if(a<10)
+            {
+                return '0'+a;
+            }
+            else
+            {
+              return  ''+a;
+            }
+        }
+
+        window.onload=function(){
+            var oBox=document.getElementById('box');
+            var aImg=oBox.getElementsByTagName('img');
+
+
+           function timer() {
+
+                    var date = new Date();
+                    var str = '';
+
+                    str = toTwo(date.getHours()) + toTwo(date.getMinutes()) + toTwo(date.getSeconds());
+
+                    for (var i = 0; i < aImg.length; i++) {
+                        aImg[i].src = 'images/' + str[i] + '.png';
+                    }
+
+
+            }
+
+            timer();
+
+           setInterval(timer,1000);
+
+
+        };
+
+    </script>
+    <style>
+        #box{ width: 800px;
+              height: 200px;
+              font-size: 50px;
+              line-height: 200px;
+              text-align: center;
+              background: aqua;
+             }
+        #box img{ width: 60px;
+                    height: 60px;
+                vertical-align: middle;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <img src="images/0.png">
+        <img src="images/0.png">
+        :
+        <img src="images/0.png">
+        <img src="images/0.png">
+        :
+        <img src="images/0.png">
+        <img src="images/0.png">
+
+    </div>
+</body>
+</html>

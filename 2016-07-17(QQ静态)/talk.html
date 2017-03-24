@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <title>我的说说</title>
+    <script>
+        window.onload = function() {
+            var oText = document.getElementById('text');
+            var oBtn1 = document.getElementById('btn1');
+            var oUl = document.getElementById('ul');
+            oBtn1.onclick = function () {
+                if(oText.value) {
+                    var oLi = document.createElement('li');
+                    oUl.insertBefore(oLi, oUl.children[0]);
+                    oLi.innerHTML = oText.value;
+                    oInput.type = 'checkbox';
+                    oLi.appendChild(oInput);
+                }
+                else{
+                    alert('请输入文本');
+                }
+
+
+            };
+        }
+    </script>
+</head>
+<body>
+<h2>欢迎进入我的说说</h2>
+<span>当前位置>我的说说><a class="back" href="QQ-zone.html">返回</a></span>
+<form>
+    <textarea name="text" placeholder="请输入你要发表的说说" id="text"></textarea>
+    <input type="button" value="发表" name="submit" id="btn1"/>
+</form>
+<ul id="ul">
+    <li>张杰，中国内陆歌手，张杰，中国内陆歌手，张杰，中国内陆歌手，张杰，中国内陆歌手</li>
+</ul>
+</body>
+</html>

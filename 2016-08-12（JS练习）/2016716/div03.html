@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:300px;
+	   height:300px;
+	   background:#C93;
+	 
+	   }
+#div2{ width:300px;
+	   height:200px;
+	   background:#60C;
+       position:relative;
+	   left:0px;
+	   top:50px;
+	   }
+#div3{ width:350px;
+	   height:200px;
+	   background:#F30;
+	 
+	   }
+#div4{ width:200px;
+	   height:200px;
+	   background:#FC6;
+	 
+	   }
+#div5{ width:200px;
+	   height:200px;
+	   background:#FC6;
+	   position:absolute;
+	   left:1200px;
+	   top:200px;
+	   }
+#div6{ width:100px;
+	   height:300px;
+	   background:#CC6;
+	   position:fixed;
+	   top:500px;
+	   right:50px;
+	   }
+</style>
+</head>
+
+<body>
+	<div id="div1">
+    	今天的重点：
+盒子模型：
+布局用的
+
+
+
+
+
+
+
+
+
+
+
+
+布局分类：
+1、	水平布局（横向布局）
+2、垂直布局（纵向布局）
+3、混合布局
+
+用到元素：
+Div 元素是块级元素，每当出现一个div都会占据一个行块。（默认状态）
+Span  行间元素，每当出现一个span就是在行内分个区间。
+
+
+
+
+
+
+
+
+
+
+
+
+
+1、	方向： top  right  bottom  left
+2、	外边距 ：margin  当做盒子的物体或者容器或者内容统称为盒子，这个盒子到另外一个对象（相邻的）距离就是外边距
+3、	边框：border    width(宽度)----style(线型)----color(颜色)
+4、	内边距:盒子内填充物到边框的距离
+Padding
+
+
+
+
+Css 3.0
+层叠样式表（单）---渲染对象的
+内容—样式—行为的三者分离
+
+样式的分类：
+1、	行间样式
+2、	内部样式
+3、	外部样式
+
+选择器：对指定的对象，进行样式的编辑的代码段。
+分类：
+1、	标记选择器
+2、	ID选择器
+3、	类选择器
+4、	组选择器
+5、	派生选择器
+
+语法:选择器{属性：值；}
+
+1、	标记选择器：
+定义：依据原有的HTML标签作为选择器名（可以直接起作用）
+2、	id选择器：
+定义：有#开头的，自定义一个名称。
+用法：在使用位置，给增加id属性。
+3、	类选择器：
+定义：有.开头的，自定义一个名称.
+用法：在使用的位置，给一个class属性
+     Id和类是用区别的：
+     Id选择器可以使用多次是程序概念实际开发中只能使用一次。（js里经常使用ID作为对象的标识）ID选择器的唯一性.
+类选择器可以使用多次。
+4、	组选择器:
+使选择器成为一组。
+5、	派生选择器：
+依据父类的样式，再使用子类样式。
+继承
+   
+
+布局:
+1、	浮动(float)—浮动层就是相当于把层拿起来了和原版面脱离。
+Left  right   none 
+Clear:清除浮动 left  right  both
+2、	如果当前层浮动，而上一层没有浮动则，当前层浮动不上去。
+3、	如果当前层不浮动，而上一个层浮动了，则当前层就会依据一个没有浮动层进行布局
+4、	当前层浮动了，也要让上一层浮动，才能让两个层在一个层面布局。
+5、	如果当前层身后的层不需要浮动就要增加clear
+
+标识符的命名规范：
+1、	由字母、数字、下划线、（$）
+2、	字母开头（下划线） 建议使用字母开头
+3、	保留字不能用作标识符
+4、	推荐定义的时候最好有一定的含义，字符长度不超过32个，推荐8个
+5、	驼峰表示法（userName）
+
+
+
+Display: 显示(效果)
+1、	可以让块状物，显示和隐藏
+2、	可以让不是块状的物体成为块状显示
+
+    </div>
+    <div id="div2">
+    	<div id="div4"></div>
+    </div>
+    <div id="div3"></div>
+    
+    <div id="div5"></div>
+    <div id="div6">导航</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //花 ，本人，女神
+        var Flower=function(){
+            this.name='玫瑰';
+        };
+
+        var Xiaoming={
+            sendFlower:function(flower,target) {
+                target.getFlower(flower);
+            }
+        };
+
+        var Nushen=function(){
+            this.getFlower=function(flower){
+                console.log(flower.name);
+            }
+        };
+
+        var B={
+             f:null,
+             getFlower:function(flower){
+                 f=flower;
+                 var n1=new Nushen();
+                 this.sendFlower(f,n1);
+
+             },
+            sendFlower:function(flower,target){
+                target.getFlower(flower);
+            }
+        };
+
+        var f1=new Flower();
+       // Xiaoming.sendFlower(f1,n1);
+
+        Xiaoming.sendFlower(f1,B);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

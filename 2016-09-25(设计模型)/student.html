@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var Person =function (name,sex,age){
+            this.name=name;
+            this.sex=sex;
+            this.age=age;
+        };
+
+        Person.prototype.say=function(){
+            return this;
+        };
+
+        var Student=function(name,sex,age,school){
+
+            this.school=school;
+            Person.call(this,name,sex,age);
+
+        };
+
+        Student.prototype=new Person();
+
+
+        var Teacher=function(name,sex,age,emp){
+            this.emp=emp;
+            Person.call(this,name,sex,age);
+        };
+
+        Teacher.prototype=new Person();
+
+        Teacher.prototype.say=function(){
+            return 'teach';
+        };
+
+        var stu1=new Student('student','man',20,'邮电大学');
+
+        console.log(stu1.name);
+        console.log(stu1.say());
+
+        var teacher=new Teacher('teacher','man',30,'emp')
+        console.log(teacher.name);
+        console.log(teacher.say());
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

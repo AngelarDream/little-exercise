@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/teacherStyle.css"/>
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/holder.min.js"></script>
+    <title></title>
+    <script>
+        $(function(){
+            $("#myCarousel").carousel({
+                interval:2000
+            });
+        });
+        window.onload=function(){
+            var oTime=document.getElementById("time");
+            var date=new Date();
+            var day=["日","一","二","三","四","五","六"];
+            var year=date.getFullYear();
+            var month=date.getMonth()+1;
+            var date01=date.getDate();
+            var day01=day[date.getDay()];
+            oTime.innerText=year+"年"+month+"月"+date01+"日----"+"----星期"+day01;
+//鼠标移动到导航条显示隐藏的部分
+            var myNavs=document.getElementById("myNav");
+            var aUl=myNavs.getElementsByTagName("ul")[0];
+            var oLi=aUl.getElementsByTagName("li");
+            var aDiv=document.getElementsByClassName("area");
+            var timer=null;
+            //alert(oContext.length);
+            //alert(oLi.length);
+            for(var i=1;i<oLi.length;i++) {
+                oLi[i].index = i;
+                oLi[i].onmouseover = function () {
+                    clearInterval(timer);
+                    for (var i = 0; i < aDiv.length; i++) {
+                        aDiv[i].style.display = "";
+                    }
+                    aDiv[this.index - 1].style.display = "block";
+                };
+                oLi[i].onmouseout = function () {
+                    timer = setInterval(function () {
+                        for (var i = 0; i < aDiv.length; i++) {
+                            aDiv[i].style.display = "none";
+                        }
+                        aDiv[this.index - 1].style.display = "none";
+                    }, 2000);
+                };
+            }
+
+            for(var i=0;i<aDiv.length;i++){
+                aDiv[i].index=i;
+                aDiv[this.index].onmouseover=function(){
+                    for(var i=0;i<aDiv.length;i++){
+                        aDiv[i].style.display="";
+                    }
+                    aDiv[this.index].style.display="block";
+                };
+                aDiv[this.index].onmouseout=function(){
+                    for(var i=0;i<aDiv.length;i++){
+                        aDiv[i].style.display="none";
+                    }
+                    aDiv[this.index].style.display="none";
+                };
+            }
+        }
+    </script>
+</head>
+<body>
+<!--顶部显示-->
+    <div id="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="imgSpecialty/logo.png" alt=""/>
+                </div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-11" id="time"></div>
+                    </div>
+                    <div class="row" id="title">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5">
+                            <img src="imgSpecialty/xx_font.png" class="img-responsive" alt=""/>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <input type="text" placeholder="搜索" id="text01"/>
+                                <span><img src="imgSpecialty/searvh_btn.png" alt=""/></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="myNav">
+                        <div class="col-md-11">
+                            <ul class="nav nav-pills">
+                                <li><a href="firstPage.html">首页</a></li>
+                                <li><a href="学院概况02.html">学院概况</a></li>
+                                <li><a href="学院机构03.html">学院机构</a></li>
+                                <li><a href="#">院系设置</a></li>
+                                <li><a href="teacher.html">师资队伍</a></li>
+                                <li><a href="SpecialtyConstruction.html">教育教学</a></li>
+                                <li><a href="#">科研学术</a></li>
+                                <li><a href="#">学科建设</a></li>
+                                <li><a href="#">招生就业</a></li>
+                                <li><a href="#">历史镜像</a></li>
+                                <li><a href="#">视频资源</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row" id="myList">
+                        <div class="col-md-12">
+                            <div class="col-md-offset-0">
+                                <div class="area" id="underNav0">
+                                    <p><a href="#">学院简介</a>&nbsp;|<a href="#">历史沿革</a>&nbsp;|<a href="#">历任院长</a>&nbsp;|<a href="#">现任领导</a>&nbsp;|<a href="#">名家作风</a>&nbsp;|<a href="#">校园风光</a>&nbsp;|<a href="#">校园地图</a>&nbsp;|<a href="#">区域交通</a>&nbsp;|&nbsp;<a href="#">联系我们</a></p>
+                                </div>
+                            </div>
+                            <div class="col-md-offset-1">
+                                <div class="area" id="underNav1">
+                                    <p><a href="#">党群机构</a>&nbsp;|<a href="#">行政机构</a>&nbsp;|<a href="#">教辅机构</a>&nbsp;|<a href="#">学术机构</a></p>
+                                </div>
+                            </div>
+                            <div class="area" id="underNav2">
+                                <p><a href="#">中国画系</a>&nbsp;|<a href="#">油画系</a>&nbsp;|<a href="#">版画系</a>&nbsp;|<a href="#">雕塑系</a>&nbsp;|<a href="#">工艺美术系</a>&nbsp;|<a href="#">设计系</a>&nbsp;|<a href="#">建筑环艺系</a>&nbsp;|<a href="#">服装系</a>&nbsp;|&nbsp;<a href="#">美术教育系</a>&nbsp;|&nbsp;<a href="#">史论系</a>&nbsp;|&nbsp;<a href="#">影视动画系</a>&nbsp;|&nbsp;<a href="#">艺术教育学院</a>&nbsp;|&nbsp;<a href="#">继续教育学院</a>&nbsp;|&nbsp;<a href="#">特教院</a>&nbsp;|&nbsp;<a href="#">附中</a>&nbsp;|&nbsp;<a href="#">基础部</a>&nbsp;|&nbsp;<a href="#">造型艺术部</a></p>
+                            </div>
+                            <div class="col-md-offset-2">
+                                <div class="area" id="underNav3">
+                                    <p><a href="#">师资概况</a>&nbsp;|<a href="teacher.html">名师风采</a>&nbsp;|<a href="#">博导硕导</a>&nbsp;|<a href="#">在职教授</a>&nbsp;|<a href="#">荣誉成就</a>&nbsp;|<a href="#">人才建设</a></p>
+                                </div>
+                            </div>
+                            <div class="col-md-offset-3">
+                                <div class="area" id="underNav4">
+                                    <p><a href="#">专业建设</a>&nbsp;|<a href="SpecialtyConstruction.html">课程建设</a>&nbsp;|<a href="#">教材建设</a>&nbsp;|<a href="#">教学改革</a>&nbsp;|<a href="#">教学成果</a>&nbsp;|<a href="#">教学名师</a>&nbsp;|<a href="#">奖学金设置</a></p>
+                                </div>
+                            </div>
+                            <div class="col-md-offset-4">
+                                <div class="area" id="underNav5">
+                                    <p><a href="#">科研概况</a>&nbsp;|<a href="#">科研项目</a>&nbsp;|<a href="#">科研成果</a>&nbsp;|<a href="#">交流共建</a></p>
+                                </div>
+                            </div>
+                            <div class="col-md-offset-5">
+                                <div class="area" id="underNav6">
+                                    <p><a href="#">建设思路</a>&nbsp;|<a href="#">学科设置</a>&nbsp;|<a href="#">美术学</a>&nbsp;|<a href="#">设计学</a>&nbsp;|<a href="#">艺术学理论</a>&nbsp;|<a href="#">音乐与舞蹈学</a>&nbsp;|<a href="#">研究生教育</a>&nbsp;|<a href="#">博士后流动站</a></p>
+                                </div>
+                            </div>
+                            <div class="col-md-offset-6">
+                                <div class="area" id="underNav7">
+                                    <p><a href="#">招生信息</a>&nbsp;|<a href="#">招生信息网</a>&nbsp;|<a href="#">就业信息网</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-offset-7">
+                                <div class="area" id="underNav8">
+                                    <p><a href="#">数字校史馆</a>&nbsp;|<a href="#">知名校友</a>&nbsp;|<a href="#">精品力作</a></p>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--轮播器-->
+    <div id="loop">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div id="myCarousel" class="carousel slide">
+                        <ol class="carousel-indicators">
+                            <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active"><img src="imgSpecialty/lunbo001-01.jpg" alt=""/></div>
+                            <div class="item"><img src="imgSpecialty/lunbo001-02-01-01.jpg" alt=""/></div>
+                            <div class="item"><img src="imgSpecialty/lunbo001-02-01-03-01.jpg" alt=""/></div>
+                            <div class="item"><img src="imgSpecialty/lunbo001-02-01-03-03-01.jpg" alt=""/></div>
+                            <div class="item"><img src="imgSpecialty/chuangyexunlian.jpg " alt=""/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+<!--图片及列表组-->
+    <div id="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <div class="row">
+                        <img src="imgSpecialty/szdw.png" alt=""/>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <ol class="list-group">
+                                <li class="list-group-item"><a href="#">师资概况</a></li>
+                                <li class="list-group-item"><a href="#">名师风采</a></li>
+                                <li class="list-group-item"><a href="#">博导硕导</a></li>
+                                <li class="list-group-item"><a href="#">在职教授</a></li>
+                                <li class="list-group-item"><a href="#">荣誉成就</a></li>
+                                <li class="list-group-item"><a href="#">人才建设</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8" id="picture">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="page-header">名师风采</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2 col-xs-6">
+                            <div class="thumbnail">
+                                <img src="imgSpecialty/2us89rjowh.jpg" alt=""/>
+                                <div class="caption">
+                                    <p>刘文西</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <div class="thumbnail">
+                                <img src="imgSpecialty/2hwhe58osn.jpg" alt=""/>
+                                <div class="caption">
+                                    <p>杨小洋</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <div class="thumbnail">
+                                <img src="imgSpecialty/276kjxkorn.jpg" alt=""/>
+                                <div class="caption">
+                                    <p>郭线庐</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <div class="thumbnail">
+                                <img src="imgSpecialty/28wd24noq2.jpg" alt=""/>
+                                <div class="caption">
+                                    <p>王胜利</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2 col-xs-6">
+                            <div class="thumbnail">
+                                <img src="imgSpecialty/20244d7omt.jpg" alt=""/>
+                                <div class="caption">
+                                    <p>郭北平</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <div class="thumbnail">
+                                <img src="imgSpecialty/4eo7z2von7.jpg" alt=""/>
+                                <div class="caption">
+                                    <p>贺丹</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <div class="thumbnail">
+                                <img src="imgSpecialty/2t75qyg155.jpg" alt=""/>
+                                <div class="caption">
+                                    <p>贺荣敏</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <div class="thumbnail">
+                                <img src="imgSpecialty/2yggw6lolk.jpg" alt=""/>
+                                <div class="caption">
+                                    <p>赵农</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2 col-xs-6">
+                            <div class="thumbnail">
+                                <img src="imgSpecialty/29opf2solz.jpg" alt=""/>
+                                <div class="caption">
+                                    <p>姜怡翔</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <div class="thumbnail">
+                                <img src="imgSpecialty/2u82o78nmp.jpg" alt=""/>
+                                <div class="caption">
+                                    <p>吴昊</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <div class="thumbnail">
+                                <img src="imgSpecialty/2xrkymwok8.jpg" alt=""/>
+                                <div class="caption">
+                                    <p>杨峰</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <div class="thumbnail">
+                                <img src="imgSpecialty/2e8zhvwoiw.jpg" alt=""/>
+                                <div class="caption">
+                                    <p>彭程</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--分页-->
+    <div id="page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-xs-3"></div>
+                <div class="col-md-6 col-xs-10 ">
+                    <ul class="pagination">
+                        <li><a href="#">&laquo;</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--地址-->
+    <div id="footer">
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-offset-4">
+                        <p>版权声明：西安美术学院信息中心版权所有 / 陕ICP备 02102  (建议使用IE7以上版本浏览)</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-2">总浏览量：00000000</div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-7">地址：陕西省西安市雁塔区含光南路100号 西安美术学院 / 邮编：710065 / 电话：029-88216989</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

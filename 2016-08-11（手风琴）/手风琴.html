@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+var timer=null;
+window.onload=function()
+{
+	var oDiv=document.getElementById('box');
+    var aDiv=oDiv.getElementsByTagName('div');
+	var m=aDiv.length;
+	for(var i=0;i<m;i++)
+	{	
+		aDiv[i].index=i;
+		aDiv[i].onclick=function()
+		{
+			for(var j=m;j>=this.index;j--)
+			{  
+			 	sportFrame(timer,aDiv[j]);
+			}
+				
+		};	
+	}
+		
+
+};
+
+function sportFrame(timer,obj)
+{
+	
+	timer=setInterval(function(){
+		if(obj.offsetWidth<=50)
+		{
+		   clearInterval(timer);
+		}
+		else
+		{
+			obj.style.width=obj.offsetWidth-10+'px';
+		}
+		
+		},30);	
+	
+}
+
+</script>
+<style>
+
+#box { position:relative;
+	   margin:50px auto;
+}
+#div1 { width:400px;
+	   height:200px;
+	   background:#CF3;
+	   float:left;
+	   position:absolute;
+	   left:120px;
+	   top:0px;
+}
+
+#div1 span{ width:50px;
+			height:200px;
+			position:absolute;
+			right:0px;
+			top:0px;
+			text-align:right;
+	
+}	
+			
+#div2 { width:400px;
+	   height:200px;
+	   background:#009;
+	      float:left;
+		  position:absolute;
+	   left:90px;
+	   top:0px;
+}
+
+#div2 span { width:50px;
+			height:200px;
+			position:absolute;
+			right:0px;
+			top:0px;
+			text-align:right;
+	
+}	
+#div3{ width:400px;
+	   height:200px;
+	   background:#0C0;
+	      float:left;
+		   position:absolute;
+	   left:60px;
+	   top:0px;
+}
+#div3 span { width:50px;
+			height:200px;
+			position:absolute;
+			right:0px;
+			top:0px;
+			text-align:right;
+	
+}	
+#div4 { width:400px;
+	   height:200px;
+	   background:#F63;
+	    float:left;
+		position:absolute;
+	   left:30px;
+	   top:0px;
+}
+#div4 span { width:50px;
+			height:200px;
+			position:absolute;
+			right:0px;
+			top:0px;
+			text-align:right;
+	
+}	
+</style>
+</head>
+
+<body>
+<div id="box">
+	<div id="div1">
+    	 <span>第<br>一<br>层</span>
+    </div>
+    <div id="div2">
+    	<span>第<br>二<br>层</span>
+    </div>
+    <div id="div3">
+    	<span>第<br>三<br>层</span>
+    </div>
+    <div id="div4">
+    	<span>第<br>四<br>层</span>
+    </div>
+</div>
+</body>
+</html>

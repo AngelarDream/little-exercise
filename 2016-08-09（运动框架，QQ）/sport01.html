@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var  oBox=document.getElementById('box');
+
+            oBox.onclick=function(){
+                sportFrame(oBox,'left',800);
+            };
+        };
+
+
+        var  timer=null;
+
+        function sportFrame(obj,prop,end)
+        {
+            clearInterval(timer);
+            var speed=0;
+            //随距离减小，速度也减小（缓冲运动）
+            timer=setInterval(function(){
+
+                speed=(end-parseInt(styleSetGet(obj,prop)))/10;
+
+                speed=speed>0?Math.ceil(speed):Math.floor(speed);
+
+                if(end==parseInt(styleSetGet(obj,prop)))
+                {
+                    clearInterval(timer);
+                }
+                else
+                {
+                    styleSetGet(obj,prop,parseInt(styleSetGet(obj,prop))+speed+'px');
+                }
+
+                document.title=speed+''+obj.offsetLeft;
+            },30);
+
+
+        }
+
+        function styleSetGet(obj,prop,value)
+        {
+            if(arguments.length==2) {
+                if (obj.currentStyle) {
+                    return obj.currentStyle[prop];
+                }
+                else {
+                    return getComputedStyle(obj, false)[prop];
+                }
+            }else if(arguments.length==3)
+            {
+                obj.style[prop]=value;
+            }
+            else
+            {
+                alert('参数不合理');
+
+            }
+
+        }
+    </script>
+    <style>
+        #box {  width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 100px;
+            background: chartreuse;
+        }
+        #line{
+            width: 2px;
+            height:400px;
+            background: red;
+            position: absolute;
+            left: 800px;
+        }
+    </style>
+</head>
+<body>
+<div id="line"></div>
+<div id="box"></div>
+</body>
+</html>

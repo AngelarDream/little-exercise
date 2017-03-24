@@ -1,0 +1,118 @@
+/*样式重置*/
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+body{
+    font-family: "Microsoft YaHei","微软雅黑",Helvetica,Tahoma,Arial,STXihei,"华文细黑",SimSun,"宋体",Heiti,"黑体",sans-serif;
+    background-color:#e3e3e3 ;
+}
+h2{
+    font-size: 1.2em ;
+    font-weight: 700;
+    color: #5cb85c;
+}
+
+/*原子类*/
+.font{
+    color:#000000;
+    font-size: 100%;
+}
+.font_white{
+    color:white;
+    font-size: 16px;
+    background-color: #5cb85c ;
+}
+
+.text{
+    height: 40px;
+    border:1px solid #a9b1c6;
+    border-radius: 3px;
+}
+/*框架类*/
+.wrap{
+    /*width: 1168px;*/
+    height: 365px;
+    margin: 10px auto;
+    border-bottom:1px solid white;
+    width: 1350px;
+
+}
+.sidebar{
+    float:left;
+    height: 315px;
+    width:517px;
+    margin:0 32px;
+
+}
+.login-info{
+    margin-right:83px;
+    float:left;
+
+
+}
+/* 图片类 */
+.img{
+    width:510px;
+    height:315px;
+}
+/*小标题类*/
+.title{
+    height: 55px;
+    border-bottom: 1px solid #ffffff;
+    line-height: 23px;
+}
+/*表单类*/
+.b{
+    display:block;
+    padding:18px 425px 14px 0;
+}
+.login-info form{
+    padding:15px 15px 0 15px;
+    display: inline-block;
+
+}
+.login-info form p{
+    margin-bottom: 8px;
+}
+.login-info form p label{
+    width: 160px;
+    height: 21px;
+    margin-right: 16px;
+    display: inline-block;
+    text-align: right;
+}
+.login-info form p input{
+    width: 175px;
+    height: 21px;
+    padding:8px 0;
+
+}
+.login-info form p span{
+
+    color: #ffffff;
+    background-color: red;
+    font-size: 12px;
+    height: 17px;
+    width: 200px;
+
+}
+.login-info form button{
+    display:inline-block;
+    width: 66px;
+    height: 40px;
+    margin-top: 8px;
+    margin-left: 176px;
+}
+/*点击状态类*/
+
+.error{
+    background-color:#e1c5c5;
+    border:1px solid red;
+    font-size:100%;
+    border-radius: 3px;
+
+}
+
+/*结束*/

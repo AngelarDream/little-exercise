@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var oBox=document.getElementsByTagName('div')[0];
+
+            document.onmousemove=function(ev){
+
+                var oEvent=ev||window.event;
+
+                var scrTop=document.documentElement.scrollTop||document.body.scrollTop;
+                var scrleft=document.documentElement.scrollLeft||document.body.scrollLeft;
+
+                oBox.style.left=scrleft+oEvent.clientX+'px'; //当前可视区的鼠标的坐标
+                oBox.style.top=scrTop+oEvent.clientY+'px';
+
+
+            };
+        };
+    </script>
+    <style>
+        div {  width: 200px;
+               height: 200px;
+                background: #00CC99;
+                position: absolute;
+             }
+    </style>
+</head>
+<body style="height: 1800px;">
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 200px;
+            height: 400px;
+            background: linear-gradient(#cccccc,#dddddd);
+        }
+        .box form{
+            margin: 8px;
+
+        }
+        /*.box input{*/
+            /*padding: 5px 0;*/
+        /*}*/
+    </style>
+    <script>
+        window.onload = function() {
+            var txt1 = document.getElementById("txt1");
+            var txt2 = document.getElementById("txt2");
+            var btn1 = document.getElementById("btn1");
+            var btn2 = document.getElementById("btn2");
+            var btn3 = document.getElementById("btn3");
+            var btn4 = document.getElementById("btn4");
+            var show = document.getElementById("show");
+            btn1.onclick = function () {
+                show.value = parseInt(txt1.value) + parseInt(txt2.value);
+            }
+            btn2.onclick = function () {
+                show.value = parseInt(txt1.value) - parseInt(txt2.value);
+            }
+            btn3.onclick = function () {
+                show.value = parseInt(txt1.value) * parseInt(txt2.value);
+            }
+            btn4.onclick = function () {
+                show.value = parseInt(txt1.value) / parseInt(txt2.value);
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div class="box">
+<form>
+    number1<input type="number" id="txt1">
+    number2<input type="number" id="txt2">
+    <input type="button" value="加" name="equal" id="btn1">
+    <input type="button" value="减" name="equa2" id="btn2">
+    <input type="button" value="乘" name="equa3" id="btn3">
+    <input type="button" value="除" name="equa4" id="btn4">
+    <input type="text" id="show">
+</form>
+</div>
+</body>
+</html>

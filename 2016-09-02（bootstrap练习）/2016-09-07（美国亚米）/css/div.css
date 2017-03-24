@@ -1,0 +1,72 @@
+/*背景样式*/
+.bg{width:100%;height:809px;background:url("../images/21.png") no-repeat;position:absolute;top:150px;z-index: 1;opacity: 0.3}
+/*外层样式*/
+.wrap{width:960px;margin:auto;z-index: 2;}
+/*顶层样式*/
+.bar{background:url("../images/20.png") no-repeat 165px -1px;padding-top:8px;}
+.bar span{display:block;margin: auto;}
+.bar-footer{width:80%;height:182px;overflow: visible;margin:auto;}
+.bar-footer img{display: inline-block;}
+.box1{height:190px;position: absolute;bottom:0;left:0;z-index: 5;}
+.box2{height:170px;position: absolute;bottom:-14px;left:60px;z-index: 6;}
+.box3{height:120px;position: absolute;bottom:-14px;right:110px;z-index:6;}
+.box4{height:260px;position: absolute;bottom:-14px;right:0;z-index:5;}
+.sale{width:283px;margin:auto;}
+.bg1{position:absolute;top:0;width:100%;height:45px;background: url("../images/23.png") no-repeat;z-index:4;}
+.bg2{position:absolute;top:18px;width:100%;background: url("../images/24.png") no-repeat 0 -18px;z-index:3;}
+.bg3{position:absolute;top:110px;width:86%;}
+.bg2 strong{display: block;height:80px;line-height:80px;}
+.bg3 strong{display:inline-block;height:20px;line-height:20px;}
+/*主体样式*/
+.main{width:80%;margin:20px auto 50px auto;}
+/*月饼侠士榜*/
+.hot{height:471px;margin-bottom:30px;}
+.left-bar{width:170px;height:315px;background: url("../images/28.PNG")no-repeat;padding-top:15px;float: left}
+.img{width:90px;height:80px;background: #6c0304;border-radius:10px;margin:5px auto;}
+.img img{width:70px;margin:10px;}
+hr{width:70px;height: 2px;color:black;}
+.ad-shopping{display:block;height:20px;width:70px;margin:8px auto;background: #ff8a0d;border-radius:8px;}
+.product-list{position: absolute;left:148px;top:30px;text-align: left}
+.product-list li{width:120px;float: left;background: #FFFFFF;margin:1px;}
+.product-list li img{width:94px;height:70px;margin: 8px 14px;}
+.product-list li span{font:bold 14px "Microsoft YaHei";color:red;}
+.rabbit{width:94px;height:151px;}
+/*品牌大赏*/
+.brand{height:600px;margin:40px 0;padding-left:1px;background:-moz-linear-gradient(top,#fbf9f5,#dac9a5);-ms-linear-gradient(top,#fbf9f5,#dac9a5),-webkit-linear-gradient(top,#fbf9f5,#dac9a5);-linear-gradient(top,#fbf9f5,#dac9a5);}
+.brand img{margin:3px;border-radius: 5px;}
+.pic-float div,.pic-float img{float: left;}
+.big-pic{width:30%;height:280px;}
+.middle-pic img{width:252px;height:140px;}
+.small-pic img{width:165px;height:129px;}
+.pic img{width:373px;height: 101px;}
+.box{height:80px;bottom:-510px;}
+.brand-lis{width:750px;height:70px;position: relative;left:30px;}
+.brand-lis ul {position:absolute;left:0;}
+.brand-lis li{float: left}
+.brand-lis li img{width:82px;height:70px;padding:0;clear: both}
+/*口味大赏*/
+.taste-show{width:100%;}
+.taste-show .pre,.taste-show .next{width:28px;height:70px;top:40px;}
+.ul-box{position:relative;height: 180px;width:715px;overflow:hidden;margin-left: 24px;}
+.ul-box ul{position: absolute;height:180px;}
+.ul-box li{width:140px;height:180px;background:#FFFFFF;display: inline-block;text-align: left;}
+.ul-box li img{width:80px;height:80px;margin:10px 20px 5px;}
+.ul-box li span{font:bold 18px "Microsoft YaHei";display:inline-block;height:30px;line-height:30px;color:#e03227;margin-top:10px;}
+.ul-box li a{font:bold 14px "Microsoft YaHei";display:inline-block;height:30px;line-height:30px;width:40px;text-align:center;border-radius:8px;background:#e03227;text-decoration: none;color:#fff;margin-left:38px;margin-top:10px;}
+/*悬浮栏样式*/
+.float-bar{position: fixed;top:150px;right:100px;}
+.float-bar img{width:140px;height:320px;}
+/*样式优化*/
+.center{display:block;text-align: center;}
+.relative{position:relative;}
+.title{width:100%;background: url("../images/30.png")no-repeat;}
+.btn{width:30px;height:70px;bottom:8px;}
+.pre{position: absolute;left:0;}
+.next{position: absolute;right:0;}
+.sort{width:260px;height:40px;margin:45px auto;}
+.sort img{float: left;width:40px;height:87px;margin-top:-46px;}
+.bgColor1{background:#021259;}
+.bgColor2{background: #af00d5;}
+.bgColor3{background:#26b6c3;}
+/*JS样式*/
+.margin{margin-left:3px;}

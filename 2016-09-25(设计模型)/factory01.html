@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .class01{ width: 200px;
+                  height: 200px;
+                  background: mediumspringgreen;
+                  float: left;}
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        var Factory=function(type,content)
+        {
+            if(this instanceof  Factory)
+            {
+                var s= new this[type](content);
+            }else
+            {
+                return new Factory(type,content);
+            }
+        };
+
+        Factory.prototype={
+            Java:function(content)
+            {
+                this.content=content;
+                (
+                        function(content){
+                            var Odiv=document.createElement('div');
+                            Odiv.innerHTML=content;
+                            Odiv.className='class01';
+                            Odiv.style.border='1px solid red';
+                            document.getElementById('container').appendChild(Odiv);
+                        }
+
+                )(content);
+            },
+
+            Javascript:function(content)
+            {
+                this.content=content;
+                (
+                        function(content){
+                            var Odiv=document.createElement('div');
+                            Odiv.innerHTML=content;
+                            Odiv.className='class01';
+                            Odiv.style.border='1px solid red';
+                            document.getElementById('container').appendChild(Odiv);
+                        }
+
+                )(content);
+            },
+
+            Php: function(content)
+            {
+                this.content=content;
+                (
+                        function(content){
+                            var Odiv=document.createElement('div');
+                            Odiv.innerHTML=content;
+                            Odiv.className='class01';
+                            Odiv.style.border='1px solid red';
+                            document.getElementById('container').appendChild(Odiv);
+                        }
+
+                )(content);
+            }
+        };
+
+        var data=[{type:'Java',content:'Java11111111哪家好'},
+            {type:'Javascript',content:'Javascrisfdsafsfsfsfsfsfpt哪家好'},
+            {type:'Php',content:'php哪家好'}];
+
+        for(var i=data.length-1;i>=0;i--)
+        {
+            Factory(data[i].type,data[i].content);
+        }
+
+    </script>
+</body>
+</html>

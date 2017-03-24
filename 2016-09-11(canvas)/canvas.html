@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>叮当猫</title>
+    <style>
+        canvas{border: 1px solid #006600;}
+    </style>
+    <script>
+        window.onload=function(){
+            var oCanvas=document.getElementById('Canvas');
+            var cvs = oCanvas.getContext("2d");
+//            头部
+            cvs.beginPath();
+            cvs.arc(150,105,100,45,90,true);
+            cvs.lineWidth=5;
+            cvs.fillStyle='dodgerblue';
+            cvs.strokeStyle="#FFDE00";
+            cvs.closePath();
+            cvs.stroke();
+            cvs.fill();
+//            脸部
+            cvs.beginPath();
+            cvs.arc(150,125,80,45,90,true);
+            cvs.lineWidth=5;
+            cvs.fillStyle='#fff';
+            cvs.closePath();
+            cvs.stroke();
+            cvs.fill();
+//           头部装饰
+            cvs.beginPath();
+            cvs.moveTo(150,32);
+            cvs.strokeStyle="#FFDE00";
+            cvs.arc(150,32,10,45,90,true);
+            cvs.stroke();
+            cvs.closePath();
+            cvs.stroke();
+//            眼睛
+            cvs.beginPath();
+            cvs.strokeStyle="#FFDE00";
+            cvs.arc(130,72,15,360,0,true);
+            cvs.stroke();
+            cvs.fillStyle='#000';
+            cvs.arc(130,72,4,360,0,true);
+            cvs.closePath();
+            cvs.stroke();
+            cvs.beginPath();
+            cvs.strokeStyle="#FFDE00";
+            cvs.arc(170,72,15,360,0,true);
+            cvs.arc(170,72,4,360,0,true);
+            cvs.closePath();
+            cvs.stroke();
+//            鼻子
+            cvs.beginPath();
+            cvs.fillStyle='red';
+            cvs.strokeStyle='#000';
+            cvs.arc(150,95,10,360,0,true)
+            cvs.stroke();
+            cvs.fill();
+            cvs.beginPath();
+            cvs.fillStyle='#fff';
+            cvs.arc(150,95,4,360,0,true)
+            cvs.fill();
+            cvs.beginPath();
+            cvs.moveTo(150,104);
+            cvs.lineTo(150,133);
+            cvs.lineWidth=2;
+            cvs.strokeStyle='#000';
+            cvs.stroke();
+//            嘴巴
+            cvs.beginPath();
+            cvs.moveTo(105,100);
+            cvs.arc(110,105,10,90,270,false);
+            cvs.strokeStyle='#000';
+            cvs.stroke();
+
+        }
+    </script>
+</head>
+<body>
+    <canvas id="Canvas" width="300" height="400"></canvas>
+</body>
+</html>

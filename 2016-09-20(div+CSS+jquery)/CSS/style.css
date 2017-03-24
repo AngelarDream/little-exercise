@@ -1,0 +1,35 @@
+/*样式重置*/
+body,html,div,ul,li,hr,p{padding:0;margin:0;border: 0;}
+li{list-style: none;}
+a{text-decoration: none;color:#000000;}
+body{width:100%;background: #f0f0f0;font-family: "微软雅黑", Helvetica, Tahoma, Arial, STXihei, "华文细黑", SimSun, "宋体", Heiti, "黑体", sans-serif}
+/*主体样式*/
+.top{width:90%;height:70px;margin:0 auto;padding:20px 0 30px;}
+.top img{height:70px;}
+.top a{display:inline-block;height:70px;line-height:115px;}
+.hr{width:100%;height: 2px;background: #008000;}
+.progress{width:1260px;height:80px;margin:40px auto;}
+.progress li{float: left;width:33%;height:80px;line-height:80px;text-align: center}
+.main{width:34%;margin:40px auto 0;font:600 12px "";display: none}
+.main>button{display:block;width:108px;height:42px;background: #419d05;margin:20px auto 30px;color:#f9f9f9;border-radius:8px;}
+.main label{display: block;height:50px;line-height:50px;}
+.main label input:first-child{height:30px;width:262px;margin:0 10px 0 5px;background:#F7F7F7;}
+.main img{float:left;margin-right: 10px;}
+#select{width:120px;height:30px;background: #f0f0f0;border:1px solid #000;border-radius:3px;}
+#code input{width:154px;}
+#code button{width:108px;height:40px;margin-right: 10px;margin-left:-10px;background: #419d05;border-radius:8px;color:#f9f9f9;}
+.footer{width:100%;background:#4d4d4d;position:fixed;bottom:0;}
+.footer div{width:50%;margin:0 auto;}
+.footer span{display:block;float: left;margin-right: 30px;}
+.footer li{float: right;margin-right:12px;}
+.footer span,li{height:42px;line-height: 42px;}
+/*样式优化*/
+.right{display:block;float: right;}
+/*字体样式*/
+.font01{font:600 16px "";color:#000000;}
+.font02{font:normal 11px "";color: #999;}
+.font03{font-size: 13px;}
+.font04{font:normal 12px "";color:#e6e6e6;}
+/*JS样式*/
+.borderColor01{border-bottom:4px solid #999;}
+.borderColor02{border-bottom:4px solid #008000;}

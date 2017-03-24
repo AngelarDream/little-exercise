@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>正则方法</title>
+    <script>
+        window.onload= function(){
+            var oTex1 = document.getElementById('txt1');
+            var oTex2 = document.getElementById('txt2');
+            var btn = document.getElementsByTagName('button')[0];
+            btn.onclick = function(){
+                alert(1)
+                oTex2.value = oTex1.value.replace(/百度/g,'腾讯');
+            };
+        }
+    </script>
+</head>
+<body>
+<textarea rows="10" cols="100"  id='txt1'></textarea>
+<button>替换</button>
+<textarea rows="10" cols="100" id="txt2"></textarea>
+</body>
+</html>

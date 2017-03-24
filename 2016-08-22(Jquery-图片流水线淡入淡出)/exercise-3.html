@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图片流水线淡入淡出</title>
+    <script type="text/javascript" src="JS-frame/jquery-3.1.0.min.js"></script>
+    <script>
+        $(function(){
+            timer = setInterval(function(){
+                var $oImg  = $("img");
+                $oImg.eq(0).animate({"opacity":0},1000).delay(2000)
+                        .animate({"opacity":1},4000);
+                $oImg.eq(1).animate({"opacity":0},2000).delay(2000)
+                        .animate({"opacity":1},3000);
+                $oImg.eq(2).animate({"opacity":0},3000).delay(2000)
+                        .animate({"opacity":1},2000);
+                $oImg.eq(3).animate({"opacity":0},4000).delay(2000)
+                        .animate({"opacity":1},1000);
+            }, 0);
+        })
+    </script>
+    <style>
+        div img{
+            padding:0;
+            margin:0;
+            background: #c0c0c0;
+        }
+        .box{
+            width: 600px;
+            height: 200px;
+            margin: 100px auto;
+            border: 2px solid #006600;
+            box-shadow: 10px 10px 3px  #00ff33;
+            vertical-align: middle;
+            background-color:#ACDBE4;
+        }
+        .box img{
+            width: 150px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="images/33.jpg" alt="图片1"/><img src="images/34.jpg" alt="图片2"/><img src="images/35.jpg" alt="图片3"/><img src="images/44.jpg" alt="图片4"/>
+</div>
+</body>
+</html>

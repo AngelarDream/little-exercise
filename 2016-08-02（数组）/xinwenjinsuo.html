@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload=function(){
+	var aBtn=document.getElementsByTagName('input');
+	var aDiv=document.getElementsByTagName('div');
+	for(var i=0;i<aBtn.length;i++)
+	  {
+		aBtn[i].index=i;
+		aBtn[i].onclick=function(){
+			for(var i=0;i<aBtn.length;i++)
+			{
+				aBtn[i].className='';
+				aDiv[i].style.display='none';
+				}
+			this.className='active';
+			aDiv[this.index].style.display='block';
+			};
+	   };
+	};
+
+</script>
+<style>
+div{
+	 width:200px;
+	 height:200px;
+	 background-color:#0FC;
+	 border:1px solid #F00;
+	 }
+.active{
+	    background-color:#FF3;}
+</style>
+</head>
+
+
+<body>
+<input type="button" value="热点" class="active">
+<input type="button" value="新闻">
+<input type="button" value="娱乐">
+<input type="button" value="国际">
+<div style="display:block;">1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--check匹配所有用户被选中的元素-->
+    <style>
+        input{
+            display: none;
+        }
+        label{
+            display: block;
+            line-height: 40px;
+            border-bottom: 1px solid #888;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .list ul{
+            display: none;
+            line-height: 40px;
+            -webkit-transition: all 0.5s linear;
+            -moz-transition: all 0.5s linear;
+            transition: all 0.5s linear
+        }
+        /*匹配用户中被选中的元素#lis1*/
+        #lis1:checked+ul{
+            display: block;
+        }
+        #lis2:checked+ul{
+            display: block;
+        }
+        #lis3:checked+ul{
+            display: block;
+        }
+        #lis4:checked+ul{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="list">
+    <label for="lis1"> 我的朋友</label>
+    <input type="radio" name="list" id="lis1" checked>
+        <ul>
+            <li><a href="#">朋友1</a></li>
+            <li><a href="#">朋友2</a></li>
+            <li><a href="#">朋友3</a></li>
+            <li><a href="#">朋友4</a></li>
+            <li><a href="#">朋友5</a></li>
+            <li><a href="#">朋友6</a></li>
+        </ul>
+    <label for="lis2"> 我的邻居</label>
+    <input type="radio" name="list" id="lis2" checked>
+        <ul>
+            <li><a href="#">邻居1</a></li>
+            <li><a href="#">邻居2</a></li>
+            <li><a href="#">邻居3</a></li>
+            <li><a href="#">邻居4</a></li>
+            <li><a href="#">邻居5</a></li>
+            <li><a href="#">邻居6</a></li>
+        </ul>
+    <label for="lis3"> 我的应用</label>
+    <input type="radio" name="list" id="lis3" checked>
+        <ul>
+            <li><a href="#">应用1</a></li>
+        </ul>
+    <label for="lis4"> 我的机器</label>
+    <input type="radio" name="list" id="lis4" checked>
+        <ul>
+            <li><a href="#">机器1</a></li>
+            <li><a href="#">机器2</a></li>
+            <li><a href="#">机器3</a></li>
+            <li><a href="#">机器4</a></li>
+            <li><a href="#">机器5</a></li>
+        </ul>
+</div>
+</body>
+</html>

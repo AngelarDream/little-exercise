@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function Person(name) {
+            this.superValue = "super";
+            this.value=[1,2,3];
+            this.name=name;
+        }
+
+        //定义person类（父类）
+
+        Person.prototype.getSuperValue=function(){
+            return this.superValue;
+        };
+
+        //增加原型方法
+
+        function Student(){
+            this.studentValue="student";
+        }
+
+        //定义子类（Student）
+
+        Student.prototype=new Person();  //通过子类的增加原型属性，来实现继承（属性值为
+        //父类对象 ）
+
+
+        Student.prototype.getStudentValue= function () {
+            return this.studentValue;
+        };
+        //增加子类原型方法
+
+
+        var stu1=new Student();   //实例化学生对象
+        var stu2=new Student();
+
+        alert(stu1.value[0]);
+
+        stu2.value[0]=15;
+        alert(stu1.value[0]);
+
+        alert(stu1.name);
+        alert(stu1.getStudentValue());
+         // 当实例化子类对象，先实例化父类对象，再实例化子类对象
+        //如果子类继承了父类，父类的所有的属性和方法都被继承下来
+        //子类可以扩展自己的属性和方法
+        //在子类扩展时，如果子类的属性名或方法名相同，叫做属性的改写或者方法的重写
+        //此时，通过子类调用的方法，先找子类覆写的方法，如果没有找到，再调用父类的方法。
+        //在java中可以通过super.方法名直接调用父类的方法。
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

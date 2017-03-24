@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //投票结果状态对象
+        var ResultState=function(){
+            //每种状态作为一种独立方法保存起来
+            var States= {
+                state0: function () {
+                    //处理结果0
+                    console.log('这是第1中情况');
+                },
+                state1: function () {
+                    //处理结果0
+                    console.log('这是第2中情况');
+                },
+                state2: function () {
+                    //处理结果0
+                    console.log('这是第3中情况');
+                },
+                state3: function () {
+                    //处理结果0
+                    console.log('这是第4中情况');
+                }
+            };
+            //获取某一种状态并执行对应的方法  私有方法如果想让外部使用，则向外部暴露接口
+            function show(result){
+                States['state'+result]&& States['state'+result]();
+            }
+
+            return{  //返回调用状态方法接口  接口向外暴露
+                show:show
+            }
+        }();
+
+
+        ResultState.show(3); //测试
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

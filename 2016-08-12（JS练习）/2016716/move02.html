@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        window.onload=function(){
+            var  oBox=document.getElementById('box');
+            var  oBtn01=document.getElementById('btn01');
+            var  timer=null;
+            oBtn01.onclick=function(){
+
+                clearInterval(timer);
+                timer=setInterval(function(){
+
+                    if(parseInt(styleSetGet(oBox,'left'))>=oBox.offsetWidth/2)
+                    {
+                        clearInterval(timer);
+                    }
+                    oBox.style.left=oBox.offsetLeft+10+'px';
+                },30);
+
+                document.title=oBox.offsetLeft;
+
+            };
+
+        };
+
+        function styleSetGet(obj,prop,value)
+        {
+            if(arguments.length==2) {
+                if (obj.currentStyle) {
+                    return obj.currentStyle[prop];
+                }
+                else {
+                    return getComputedStyle(obj, false)[prop];
+                }
+            }else if(arguments.length==3)
+            {
+                obj.style[prop]=value;
+            }
+            else
+            {
+                alert('参数不合理');
+
+            }
+
+        }
+    </script>
+    <style>
+        #box {  width: 200px;
+                height: 200px;
+                background: blue;
+
+            position: absolute;
+                }
+    </style>
+</head>
+<body>
+    <input type="button" value="运动" id="btn01">
+    <div id="box"></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style>
+div{ width:100px;
+	 height:100px;
+	 background:#CF3;
+	 border-radius:100px;
+	 position:absolute;
+	 animation:sport 3s cubic-bezier(0.23,0,0.8,1) 3s alternate;
+	 
+	 }
+
+@keyframes run{
+
+   0%{background:#CF0;
+   	 left:0px;
+	 border-radius:0px;
+	
+	 }
+	 
+   100%{ background:#F33;
+   		left:400px;
+		 border-radius:100px;
+		}
+	
+}
+
+@keyframes sport{
+    0%{ background:#CF0;}
+	25%{ background:#30C;}
+	50%{ background:#FF0;}
+	75%{ background:#C36;}
+	100%{ background:#6F3;}
+		
+}
+</style>
+</head>
+
+<body>
+	<div></div>
+</body>
+</html>

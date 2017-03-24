@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>高级图片切换</title>
+    <script>
+        var ImgInfo=
+                [
+                    {info: "都市魅力"},
+                    {info: "古香古色"},
+                    {info: "沉浸舞步的舞者"},
+                    {info: "名贵跑车"},
+                    {info: "聆听天籁的精灵"},
+                    {info: "绚彩光芒"}
+                ];
+        var oDiv=null;
+        var oUlContent=null;
+        var oUlBtn=null;
+        var aLiImg=null;
+        var aLiBtn=null;
+        var oBtnPrev=null;
+        var oBtnNext=null;
+        var oTxtInfo=null;
+        var oTxtLength=null;
+        var oMarkPrev=null;
+        var oMarkNext=null;
+        var g_aTimerImg=[];
+        var g_aTimerBtn=[];
+        var g_oTimerUl=null;
+        var g_oTimerAutoPlay=null;
+        var g_aLiBtnAlpha=[];
+        var g_iNowImg=0;
+        var g_iZIndexBase=2;
+        window.onload=function () {
+            var i = 0;
+
+            //获取各类元素
+            oUlBig = document.getElementsByTagName("ul")[0];
+            oUlSmall = document.getElementsByTagName("ul")[1];
+
+            oBtnPrev = oUlBig.getElementsByTagName('div')[0];
+            oBtnNext = oUlBig.getElementsByTagName('div')[1];
+
+            oTxtInfo = oUlBig.getElementsByTagName('div')[2];
+            oTxtLength = oUlBig.getElementsByTagName('div')[3];
+
+            oMarkPrev = oUlBig.getElementsByTagName('a')[0];
+            oMarkNext = oUlBig.getElementsByTagName('a')[1];
+
+            aLiBig = oUlBig.getElementsByTagName('li');
+            aLiSmall = oUlSmall.getElementsByTagName('li');
+            //为元素添加属性
+            oTxtInfo.innerHTML=ImgInfo[0].info;
+            oTxtLength.innerHTML='1/'+aLiBig.length;
+
+            oMarkPrev.href=ImgInfo[0].href;
+            oMarkNext.href=ImgInfo[0].href;
+
+            oBtnPrev.miaovOpacity=0;
+            oBtnNext.miaovOpacity=0;
+
+            oBtnPrev.miaovTime=0;
+            oBtnNext.miaovTime=0;
+
+            oUlBtn.style.width=aLiBtn[0].offsetWidth*aLiBtn.length+'px';
+        }
+    </script>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            border:0;
+            list-style:none;
+        }
+        body{
+            background:#666;
+            color: #ffffff;
+            font-size: 12px;
+        }
+        .wrap{
+            width: 400px;
+            margin:50px auto;
+            height: 430px;
+            background: #999;
+        }
+        .pic-show{
+            width: 400px;
+            border-bottom: 1px solid #ccc;
+            background: #222;
+            position: relative;
+            height: 320px;
+        }
+        .pic-show li{
+            width: 400px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .left-area{
+            width: 200px;
+            height: 320px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3000;
+        }
+        .right-area{
+            width: 200px;
+            height: 320px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 3000;
+        }
+        .left-btn{
+            width: 60px;
+            height: 60px;
+            background:url("images/btn.gif") no-repeat;
+            position: absolute;
+            left: 10px;
+            top: 130px;
+            z-index: 3001;
+        }
+        .right-btn{
+            width: 60px;
+            height: 60px;
+            background:url("images/btn.gif")0 -60px no-repeat ;
+            position: absolute;
+            right: 10px;
+            top:130px;
+            z-index: 3001;
+        }
+        .bot-bg{
+            width: 400px;
+            height: 29px;
+            background: #000;
+            position: absolute;
+            left: 0;
+            bottom:0;
+            z-index: 2999;
+            opacity: 0.6;
+        }
+        .text{
+             position: absolute;
+             left: 10px;
+             bottom: 6px;
+            z-index: 3000;
+         }
+        .length{
+            position: absolute;
+            right: 10px;
+            bottom: 6px;
+            z-index: 3000;
+        }
+
+        .pic-lis{
+            width: 380px;
+            height: 94px;
+            position: relative;
+            left: 10px;
+            top: 7px;
+            overflow:hidden;
+
+        }
+        .pic-lis ul{
+            width:780px;
+            position:absolute;
+            left: 0;
+        }
+        .pic-lis li{
+            background: url("images/loading.gif") no-repeat center center;
+            float: left;
+            padding-right: 10px;
+        }
+        .pic-lis img{
+            width:120px;
+            height: 94px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+       <ul class="pic-show">
+           <div class="left-btn"></div>
+           <div class="right-btn"></div>
+           <a  class="left-area"></a>
+           <a class="right-area"></a>
+           <div class="text"><span>加载图片说明……</span></div>
+           <div class="length">计算图片数量……</div>
+           <div class="bot-bg"></div>
+           <li style="z-index:1;"><img src="images/1.jpg" alt="图片1"/></li>
+           <li><img src="images/2.jpg" alt="图片2"/></li>
+           <li><img src="images/3.jpg" alt="图片3"/></li>
+           <li><img src="images/4.jpg" alt="图片4"/></li>
+           <li><img src="images/5.jpg" alt="图片5"/></li>
+           <li><img src="images/6.jpg" alt="图片6"/></li>
+        </ul>
+       <div class="pic-lis">
+           <ul>
+               <li><img src="images/1.jpg" alt="图片1"/></li>
+               <li><img src="images/2.jpg" alt="图片2"/></li>
+               <li><img src="images/3.jpg" alt="图片3"/></li>
+               <li><img src="images/4.jpg" alt="图片4"/></li>
+               <li><img src="images/5.jpg" alt="图片5"/></li>
+               <li><img src="images/6.jpg" alt="图片6"/></li>
+           </ul>
+       </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/sportFrame01.js"></script>
+    <script>
+        window.onload=function(){
+            var oBox=document.getElementById('box');
+
+            oBox.onmouseover=function(){
+                sportFrame(oBox,'width',800,function(){
+
+                  sportFrame(oBox,'height',800,function(){
+
+                      sportFrame(oBox,'opacity',30);
+
+                  });
+
+                });
+            };
+            oBox.onmouseout=function(){
+                sportFrame(oBox,'opacity',100,function(){
+                    sportFrame(oBox,'height',100,function(){
+                        sportFrame(oBox,'width',100);
+                    });
+                });
+            };
+        };
+    </script>
+    <style>
+        #box{ width: 100px;
+              height:100px;
+              background: magenta;
+             position: absolute;
+             bottom:0 ;}
+    </style>
+</head>
+
+<body style="overflow: hidden;">
+    <div id="box"></div>
+</body>
+</html>

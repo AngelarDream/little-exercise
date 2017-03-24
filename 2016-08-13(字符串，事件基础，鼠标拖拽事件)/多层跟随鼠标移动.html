@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload=function(){
+ var aDiv=document.getElementsByTagName('div');
+ 
+ document.onmousemove=function(evt)
+ {
+	var oEvent=evt||event;
+	
+	for(var i=aDiv.length-1;i>0;i--)
+	{
+		aDiv[i].style.left=aDiv[i-1].offsetLeft+'px';
+		aDiv[i].style.top=aDiv[i-1].offsetTop+'px';	
+	}
+	
+	aDiv[0].style.left=oEvent.clientX+'px';
+	aDiv[0].style.top=oEvent.clientY+'px';		 
+ };	
+};
+</script>
+<style>
+div { width:20px;
+	  height:20px;
+	  background:#C06;
+	  position:absolute;
+}
+</style>
+</head>
+
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

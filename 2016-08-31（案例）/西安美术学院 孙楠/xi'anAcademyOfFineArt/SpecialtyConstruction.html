@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/styleConstruction.css"/>
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/holder.min.js"></script>
+    <title></title>
+    <script>
+        $(function(){
+            $("#myCarousel").carousel({
+                interval:2000,
+            });
+            $("[data-toggle='popover']").popover();
+        })
+        window.onload=function(){
+            var oTime=document.getElementById("time");
+            var date=new Date();
+            var day=["日","一","二","三","四","五","六"]
+            var year=date.getFullYear();
+            var month=date.getMonth()+1;
+            var date01=date.getDate();
+            var day01=day[date.getDay()];
+            oTime.innerText=year+"年"+month+"月"+date01+"日---"+"---星期"+day01;
+
+            var myNavs=document.getElementById("myNav");
+            var aUl=myNavs.getElementsByTagName("ul")[0];
+            var oLi=aUl.getElementsByTagName("li");
+            var aDiv=document.getElementsByClassName("area");
+            var timer=null;
+            //alert(oContext.length);
+            //alert(oLi.length);
+            for(var i=1;i<oLi.length;i++) {
+                oLi[i].index = i;
+                oLi[i].onmouseover = function () {
+                    clearInterval(timer);
+                    for (var i = 0; i < aDiv.length; i++) {
+                        aDiv[i].style.display = "";
+                    }
+                    aDiv[this.index - 1].style.display = "block";
+                };
+                oLi[i].onmouseout = function () {
+                    timer = setInterval(function () {
+                        for (var i = 0; i < aDiv.length; i++) {
+                            aDiv[i].style.display = "none";
+                        }
+                        aDiv[this.index - 1].style.display = "none";
+                    }, 2000);
+                };
+            }
+
+            for(var i=0;i<aDiv.length;i++){
+                aDiv[i].index=i;
+                aDiv[i].onmouseover=function(){
+                    clearInterval(timer);
+                    for(var i=0;i<aDiv.length;i++){
+                        aDiv[i].style.display="";
+                    }
+                    aDiv[this.index].style.display="block";
+                };
+                aDiv[i].onmouseout=function(){
+                    timer = setInterval(function () {
+                        for (var i = 0; i < aDiv.length; i++) {
+                            aDiv[i].style.display = "none";
+                        }
+                        aDiv[this.index ].style.display = "none";
+                    }, 2000);
+                };
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-xs-6">
+                    <img src="imgSpecialty/logo.png" class="img-responsive" alt=""/>
+                </div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-12" id="time"></div>
+                    </div>
+                    <div class="row title">
+                        <div class="col-md-12">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-4">
+                                <img src="imgSpecialty/xx_font.png" class="img-responsive" alt=""/>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-group">
+                                    <input type="text" class="search" placeholder="搜索"/>
+                                    <span ><img src="imgSpecialty/searvh_btn.png" alt=""/></span>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    <div class="row" id="myNav">
+                        <div class="col-md-12">
+                            <ul class="nav nav-pills">
+                                <li><a href="firstPage.html">首页</a></li>
+                                <li><a href="学院概况02.html">学院概况</a></li>
+                                <li><a href="学院机构03.html">学院机构</a></li>
+                                <li><a href="#">院系设置</a></li>
+                                <li><a href="teacher.html">师资队伍</a></li>
+                                <li><a href="SpecialtyConstruction.html">教育教学</a></li>
+                                <li><a href="#">科研学术</a></li>
+                                <li><a href="#">学科建设</a></li>
+                                <li><a href="#">招生就业</a></li>
+                                <li><a href="#">历史镜像</a></li>
+                                <li><a href="#">视频资源</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row" id="myList">
+                        <div class="col-md-12">
+                            <div class="col-md-offset-0">
+                                <div class="area" id="underNav0">
+                                    <p><a href="#">学院简介</a>&nbsp;|<a href="#">历史沿革</a>&nbsp;|<a href="#">历任院长</a>&nbsp;|<a href="#">现任领导</a>&nbsp;|<a href="#">名家作风</a>&nbsp;|<a href="#">校园风光</a>&nbsp;|<a href="#">校园地图</a>&nbsp;|<a href="#">区域交通</a>&nbsp;|&nbsp;<a href="#">联系我们</a></p>
+                                </div>
+                            </div>
+                            <div class="col-md-offset-1">
+                                <div class="area" id="underNav1">
+                                    <p><a href="#">党群机构</a>&nbsp;|<a href="#">行政机构</a>&nbsp;|<a href="#">教辅机构</a>&nbsp;|<a href="#">学术机构</a></p>
+                                </div>
+                            </div>
+                            <div class="area" id="underNav2">
+                                <p><a href="#">中国画系</a>&nbsp;|<a href="#">油画系</a>&nbsp;|<a href="#">版画系</a>&nbsp;|<a href="#">雕塑系</a>&nbsp;|<a href="#">工艺美术系</a>&nbsp;|<a href="#">设计系</a>&nbsp;|<a href="#">建筑环艺系</a>&nbsp;|<a href="#">服装系</a>&nbsp;|&nbsp;<a href="#">美术教育系</a>&nbsp;|&nbsp;<a href="#">史论系</a>&nbsp;|&nbsp;<a href="#">影视动画系</a>&nbsp;|&nbsp;<a href="#">艺术教育学院</a>&nbsp;|&nbsp;<a href="#">继续教育学院</a>&nbsp;|&nbsp;<a href="#">特教院</a>&nbsp;|&nbsp;<a href="#">附中</a>&nbsp;|&nbsp;<a href="#">基础部</a>&nbsp;|&nbsp;<a href="#">造型艺术部</a></p>
+                            </div>
+                            <div class="col-md-offset-2">
+                                <div class="area" id="underNav3">
+                                    <p><a href="#">师资概况</a>&nbsp;|<a href="teacher.html">名师风采</a>&nbsp;|<a href="#">博导硕导</a>&nbsp;|<a href="#">在职教授</a>&nbsp;|<a href="#">荣誉成就</a>&nbsp;|<a href="#">人才建设</a></p>
+                                </div>
+                            </div>
+                            <div class="col-md-offset-3">
+                                <div class="area" id="underNav4">
+                                    <p><a href="SpecialtyConstruction.html">专业建设</a>&nbsp;|<a href="#">课程建设</a>&nbsp;|<a href="#">教材建设</a>&nbsp;|<a href="#">教学改革</a>&nbsp;|<a href="#">教学成果</a>&nbsp;|<a href="#">教学名师</a>&nbsp;|<a href="#">奖学金设置</a></p>
+                                </div>
+                            </div>
+                            <div class="col-md-offset-4">
+                                <div class="area" id="underNav5">
+                                    <p><a href="#">科研概况</a>&nbsp;|<a href="#">科研项目</a>&nbsp;|<a href="#">科研成果</a>&nbsp;|<a href="#">交流共建</a></p>
+                                </div>
+                            </div>
+                            <div class="col-md-offset-5">
+                                <div class="area" id="underNav6">
+                                    <p><a href="#">建设思路</a>&nbsp;|<a href="#">学科设置</a>&nbsp;|<a href="#">美术学</a>&nbsp;|<a href="#">设计学</a>&nbsp;|<a href="#">艺术学理论</a>&nbsp;|<a href="#">音乐与舞蹈学</a>&nbsp;|<a href="#">研究生教育</a>&nbsp;|<a href="#">博士后流动站</a></p>
+                                </div>
+                            </div>
+                            <div class="col-md-offset-6">
+                                <div class="area" id="underNav7">
+                                    <p><a href="#">招生信息</a>&nbsp;|<a href="#">招生信息网</a>&nbsp;|<a href="#">就业信息网</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-offset-7">
+                                <div class="area" id="underNav8">
+                                    <p><a href="#">数字校史馆</a>&nbsp;|<a href="#">知名校友</a>&nbsp;|<a href="#">精品力作</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+        </div>
+    </div>
+    <div id="loop">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div id="myCarousel" class="carousel slide">
+                        <ol class="carousel-indicators">
+                            <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active"><img src="imgSpecialty/lunbo001-01.jpg" alt=""/></div>
+                            <div class="item"><img src="imgSpecialty/lunbo001-02-01-01.jpg" alt=""/></div>
+                            <div class="item"><img src="imgSpecialty/lunbo001-02-01-03-01.jpg" alt=""/></div>
+                            <div class="item"><img src="imgSpecialty/lunbo001-02-01-03-03-01.jpg" alt=""/></div>
+                            <div class="item"><img src="imgSpecialty/chuangyexunlian.jpg " alt=""/></div>
+                        </div>
+                        <!-- <a href="#myCarousel" data-slide="prev" class="carousel-control left">
+                             <span class="glyphicon glyphicon-chevron-left"></span>
+                         </a>
+                         <a href="#myCarousel" data-slide="next" class="carousel-control right">
+                             <span class="glyphicon glyphicon-chevron-right"></span>
+                         </a>-->
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2 left-content">
+                <img src="imgSpecialty/jyjx.png" alt=""/>
+                <ol class="list-group">
+                    <li class="list-group-item"><a href="#">专业建设</a></li>
+                    <li class="list-group-item"><a href="#">课程建设</a></li>
+                    <li class="list-group-item"><a href="#">教材建设</a></li>
+                    <li class="list-group-item"><a href="#">教学改革</a></li>
+                    <li class="list-group-item"><a href="#">教学成果</a></li>
+                    <li class="list-group-item"><a href="#">教学名师</a></li>
+                    <li class="list-group-item"><a href="#">奖学金设置</a></li>
+                </ol>
+            </div>
+            <div class="col-md-6 head">
+                <div class="row">
+                    <div class="page-header text">专业建设</div>
+                </div>
+                <div class="row">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我院目前拥有艺术学、教育学和管理学三个学科门类下，
+                        共25个本科专业。其中，国家级特色专业5个，省级特色专业7个，省级重点学科1个。</p>
+                    <p class="tabhead"><b>西安美术学院现设专业一览表</b></p>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <table class="table table-bordered mytab">
+                            <tr>
+                                <th style="width: 100px;text-align: center;"><p>学科门类</p></th>
+                                <th><p>专业类</p></th>
+                                <th><p>专业</p></th>
+                                <th><p>备注</p></th>
+                            </tr>
+                            <tr>
+                                <td rowspan="21" style="padding-top:600px;text-align: center;">艺<br/>术<br/>学<br/>13</td>
+                                <td>
+                                    <p>艺术学理论类1301</p>
+                                </td>
+                                <td>
+                                    <p>艺术史类130101</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>音乐与舞蹈学类 1302</p>
+                                </td>
+                                <td>
+                                    <p>音乐学130202</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" style="padding-top:60px;">戏剧与影视学类1303</td>
+                                <td>
+                                    <p>戏剧影视美术设计130307</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="padding-top: 15px;">动画130307</p>
+                                </td>
+                                <td>
+                                    <p>2010年国家级特色专业、省级特色专业</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>影视摄影与制作130307</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="7" style="padding-top: 210px;">美术学130401</td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td>2010年国家级特色专业<br>2009年省级特色专业</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="padding-top: 35px;">绘画130402</p>
+                                </td>
+                                <td>2002年省级名牌专业<br>2007年国家级特色专业、省级特色专业<br>2012国家级专业综合改革试点</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="padding-top: 35px;">雕塑130403</p>
+                                </td>
+                                <td>2006年陕西省名牌专业<br>2007年省级特色专业<br>2009年国家级特色专业<br>2013国家级专业综合改革试点</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>摄影130404</p>
+                                </td>
+                                <td>2011年省级特色专业</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>书法学130405T</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="padding-top: 20px;">中国画130406T</p>
+                                </td>
+                                <td>1998年陕西省重点学科<br>2011年省级特色专业<br>2012省级专业综合改革试点</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>实验艺术130407TK</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="9" style="padding-top: 240px;">设计学类1305</td>
+                                <td>
+                                    <p>艺术设计学130501</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="padding-top: 50px;">视觉传达设计130502</p>
+                                </td>
+                                <td>2004年陕西省名牌专业（原艺术设计）<br>2006年省级特色专业（原艺术设计）<br>2008年国家级特色专业（原艺术设计）
+                                   <br>2013省级专业综合改革试点</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>环境设计130503</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>产品设计130504</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>服装与服饰设计130505</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>公共艺术130506</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>工艺美术130507</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>数字媒体艺术130508</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>艺术与科技130509T</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" style="padding-top: 30px;text-align: center;">教育学04</td>
+                                <td rowspan="2" style="padding-top: 30px;">教育学类0401</td>
+                                <td>
+                                    <p>艺术教育040105</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>学前教育040106</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">管理学12</td>
+                                <td>工商管理类1202</td>
+                                <td>
+                                    <p>文化产业管理120210</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+<footer id="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-6">
+                <address>版权声明：西安美术学院信息中心版权所有 / 陕ICP备 02102  (建议使用IE7以上版本浏览)</address>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row address">
+            <div class="col-md-3"></div>
+            <div class="col-md-2">总浏览量：00000000</div>
+            <div class="col-md-7">
+                <address>地址：陕西省西安市雁塔区含光南路100号 西安美术学院 / 邮编：710065 / 电话：029-88216989</address>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

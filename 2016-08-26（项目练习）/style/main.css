@@ -1,0 +1,21 @@
+/*主体样式s*/
+.content{width:800px;margin:5px auto;}
+/*主体样式左边内容*/
+.left-content{width:200px;border:1px solid #aaaaaa;margin-right: 10px;background: #eee;float: left}
+.news{width:200px;height:100px;}
+.news ul{width:190px; height: 77px;padding-left: 10px;}
+.product-sort{width:200px;}
+.global_style{background: #eeeeee;padding-bottom: 8px}
+.global_h3{width:200px;background: #aaaaaa;cursor:pointer;}
+.expanded{padding-left:16px;cursor:pointer;background: url("../image/qq6.PNG") no-repeat;}
+.expanded ul li{padding-left:16px;}
+/*主体样式右边内容*/
+.right-content{width:586px;background: #eee;border:1px solid #aaaaaa;float: left;position: relative}
+.ad{width: 586px;height: 150px;float: left;overflow: hidden}
+.ad img{width: 586px;height: 150px;}
+.num{position: absolute;top:110px;right: 10px;}
+.num li{width: 20px;height: 20px;background: #FFFFFF;display: inline-block;text-align: center}
+.show{width: 586px;padding-left:3px;margin-top:4px;}
+.show li{display:inline-block}
+.right-content h3{background: #aaaaaa;width:586px;}
+.show img{width: 140px;height:166px;margin-right:3px}

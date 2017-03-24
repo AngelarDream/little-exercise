@@ -1,0 +1,92 @@
+body{background: url("../images/car_images/340.jpg")repeat-x;font:normal 12px "宋体";  color: #454545;}
+/*清除样式*/
+* {margin: 0;padding: 0;border: 0;}
+/*字体样式*/
+.font01 {color: #3059AE;}
+.font02 {font-size: 14px;line-height: 30px;font-weight: bold;color: #3E68BF;}
+.font03 {color: #55B1DF;}
+.font04 {line-height: 25px;color: #00B3EB;border-bottom: 1px solid #00B3EB;}
+.font05 {color: #00B3EB;float: left;margin-left: 10px;}
+.font06 {float: left;color: #00B3EB;margin-left: 10px;}
+.font07 {float: left;margin-left: 362px;}
+/*背景模块样式*/
+.bg{width: 519px;height: 516px;background: url("../images/car_images/341.jpg")no-repeat;position: absolute;top: 0;right: 0;z-index: -1;}
+/*外层样式*/
+.wrap{width: 743px;margin: 0 auto;}
+/*顶部样式*/
+.top{background: url("../images/car_images/342.gif") no-repeat 0 30px;width: 743px;height: 276px;text-align: center;padding-top: 16px;color: #A8AFB2;z-index: 1;}
+.contact span {font-size: 7px;color: #B2E84B;margin-right: 8px;margin-left: 8px;}
+.logo{width: 126px;height: 63px;margin: 12px 0 16px 1px;background: url("../images/car_images/343.gif") no-repeat;float: left;}
+.language{width: 190px;height: 63px;line-height: 30px;margin: 12px 0 16px 0;float: right;color: #C7E6F5;}
+.language ul{list-style: none;}
+.language ul li{display: inline;}
+.tip1{clear: both;float: left;height: 35px;width: 112px;line-height: 35px;color: #00B3EB;padding-left: 15px;}
+.tip2{width: 448px;height: 35px;float: right;font: italic bold 24px "黑体";color: #3059ae;}
+/*主体main的设置*/
+.main-left{width: 170px;height: 622px;position:relative;left: 8px;top:-28px;float: left;}
+.order{width: 170px;height: 181px;border-bottom:1px dotted black;}
+.form{height: 193px;width: 170px;margin-top: 8px;}
+.form input{font-family: Arial, Helvetica, sans-serif;font-size: 12px;
+    color: #53B3E2;
+    height: 18px;
+    width: 170px;
+    margin-bottom: 5px;
+    border: 1px solid #8F999B;
+}
+.f_tip{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #53B3E2;
+    height: 80px;
+    width: 170px;
+    margin-bottom: 5px;
+    border: 1px solid #8F999B;
+}
+#f_ok{
+    width:50px;
+    height: 30px;
+}
+.main-right{
+    width: 529px;
+    height: 714px;
+    position:relative;
+    top:-121px;
+    left:40px;
+    float: left;
+}
+.bg1{
+    background: url(images/car_images/346.gif) no-repeat;
+    height: 60px;
+    width: 304px;
+}
+.bg2{
+    background: url(images/car_images/347.gif)no-repeat;
+    height: 115px;
+    width: 508px;
+}
+.car div{
+    height: 128px;
+    width: 529px;
+    line-height: 16px;
+
+}
+.car h1{
+    font-size: 17px;
+    color: #8FCF13;
+    padding: 5px 0 8px 0;
+    border-bottom: 1px dotted black;
+}
+.car img{
+    float: right;
+    margin-left: 25px;
+    margin-top: 28px;
+}
+.bottom{
+    width: 743px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    clear: both;
+    position: relative;
+    top:-120px;
+}

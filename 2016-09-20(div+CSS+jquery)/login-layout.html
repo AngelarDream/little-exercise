@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Div+CSS实现</title>
+    <script type="text/javascript" src="Frame/jquery/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="JS/jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="top font01">
+        <img src="images/logo.png" alt="logo">
+        <span>| 用户注册</span>
+        <span class="right"><a href="#">首页</a><a href="#"> | 登录</a></span>
+    </div>
+    <hr class="hr">
+    <ul class="progress">
+        <li class="borderColor01">注册账号</li>
+        <li class="borderColor01">完善基本信息</li>
+        <li class="borderColor01">完成注册</li>
+    </ul>
+    <div class="main">
+        <form>
+            <label>手机号:<input type="text"><span>*</span></label>
+            <div id="code"><label>验证码:<input type="text"><button>获取验证码</button><span>*</span></label></div>
+        </form>
+        <button>下一步</button>
+    </div>
+    <div class="main">
+       <form>
+           <label>真实姓名:<input type="text"/><input type="radio" name="sex" required>女士<input type="radio" name="sex"/>先生</label>
+           <label>登录密码:<input type="text" required/><span class="font02">仅包括数字下划线或减号且长度不小于8</span></label>
+           <label>确认密码:<input type="text" required/></label>
+           <label for="select">公司名称:<input type="text" required/>
+           <select name="companyName" id="select" class="font03">
+               <option value="" selected>未选择</option>
+               <option value="">公司1</option>
+               <option value="">公司2</option>
+               <option value="">公司3</option>
+           </select>
+           </label>
+           <input type="checkbox"/><span>我已阅读并同意《皮皮易用户协》</span>
+       </form>
+        <button type="button">提交</button>
+    </div>
+    <div class="main">
+        <img src="images/succeed.png" alt=""/>
+        <span class="font01">恭喜！你已成功完成注册</span><br>
+        <span class="font02">5秒后前往登录页面...</span>
+    </div>
+    <div class="footer font04">
+       <div>
+           <span>@2015-2016皮皮易电子商务</span>
+           <span>陕ICP1500706号</span>
+            <ul>
+                <li>关于我们</li>
+                <li>联系我们 | </li>
+                <li>意见反馈 | </li>
+                <li>法律声明&nbsp | </li>
+            </ul>
+       </div>
+    </div>
+</div>
+</body>
+</html>

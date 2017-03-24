@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+var timer=null;
+window.onload=function()
+{
+	var oDiv=document.getElementById('box');
+    var aDiv=oDiv.getElementsByTagName('div');
+	var m=aDiv.length;
+	var n=0;
+	
+	for(var i=0;i<m;i++)
+	{
+		aDiv[i].index=i;  //给每一个div加索引
+		aDiv[i].onclick=function()  //给所有的div加点击事件
+		{ 
+					  if(n==0)
+					  {
+							for(var j=m-1;j>=this.index;j--) // 下标aDiv[3] aDiv[2] 1  this.index=2
+							 { 
+							  
+								 sportFrame(timer,aDiv[j],40);
+							 }
+							 
+					  }else if(n==1)
+						 
+						{  		for(var j=0;j<=this.index;j++)
+								 {
+									 sportFrame(timer,aDiv[j],400);	
+								 }
+						}
+						else
+						{
+							
+						}
+						
+				  if(aDiv[this.index].offsetWidth==40)
+				  {
+						n=1; 
+				  }
+				  
+				  if(aDiv[this.index].offsetWidth==400)
+					{
+						n=0;  //对照值	
+					}	
+		};
+		
+		//i=4;	
+	}
+	
+
+};
+
+function sportFrame(timer,obj,target)
+{   
+   clearInterval(timer);
+	var speed=0;	
+	timer=setInterval(function(){
+		speed=(target-obj.offsetWidth)/10;
+		speed=speed>0?Math.ceil(speed):Math.floor(speed);
+		if(obj.offsetWidth==target)
+		{
+		   clearInterval(timer);
+		}
+		else
+		{
+			obj.style.width=obj.offsetWidth+speed+'px';
+		}
+		
+		},30);
+	
+}
+
+</script>
+<style>
+
+
+#box { position:relative;
+	   margin:50px auto;
+	   border:1px solid #F00;
+	   width:520px;
+	   height:200px;
+	   background:url(image/6.jpg);
+}
+
+#box img{width:100%;
+		 height:100%;}
+#div1 { width:400px;
+	   height:200px;
+	 
+	   float:left;
+	   position:absolute;
+	   left:120px;
+	   top:0px;
+}
+
+
+			
+#div2 { width:400px;
+	   height:200px;
+	 
+	      float:left;
+		  position:absolute;
+	   left:80px;
+	   top:0px;
+}
+
+
+#div3{ width:400px;
+	   height:200px;
+	 
+	      float:left;
+		   position:absolute;
+	   left:40px;
+	   top:0px;
+}
+
+	
+
+#div4 { width:400px;
+	   height:200px;
+	 
+	    float:left;
+		position:absolute;
+	   left:0px;
+	   top:0px;
+}
+
+</style>
+</head>
+
+<body>
+<div id="box">
+	<div id="div1">
+    	<img src="image/5.jpg">
+    </div>
+    <div id="div2">
+    	<img src="image/4.jpg">
+    </div>
+    <div id="div3">
+    	<img src="image/2.jpg">
+    </div>
+    <div id="div4">
+    	<img src="image/1.jpg">
+    </div>
+</div>
+</body>
+</html>

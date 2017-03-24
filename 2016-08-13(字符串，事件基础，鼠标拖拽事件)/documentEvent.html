@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //我们的事件加在document为什么不加在body上
+        window.onload=function(){
+            document.body.onclick=function(){
+                alert('hello');
+//
+//                alert(document.childNodes[0].nodeName);
+            };
+        };
+    </script>
+</head>
+<body style="height: 1800px;">
+<div style="background: #ccc;">
+<input type="button" value="点击">
+</div>
+</body>
+</html>

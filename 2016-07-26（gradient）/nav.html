@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>导航栏</title>
+    <style>
+        .nav{
+            list-style: none;
+            width: 80px;
+        }
+        .nav li{
+            width: 80px;
+            height: 80px;
+            border: 5px dotted #1E90FF;
+            border-radius: 8px;
+            background: -moz-linear-gradient(top,rgba(100,120,240,0),rgba(100,120,230,1)),url(images/801.jpg);
+            transform: translate(0,10px) rotate(45deg);
+            float: left;
+        }
+        .nav li:hover{
+            transform: translate(0,10px) rotate(45deg) scale(1.5);
+        }
+        .nav a{
+            display: block;
+            text-decoration: none;
+            transform:rotate(-45deg);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<ul class="nav">
+    <li><a>首页</a></li>
+    <li><a>主页</a></li>
+    <li><a>介绍</a></li>
+    <li><a>相册</a></li>
+    <li><a>联系我们</a></li>
+    <li><a>留言板</a></li>
+</ul>
+</body>
+</html>

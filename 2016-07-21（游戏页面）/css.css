@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    font:normal 12px "ËÎÌו";
+    color: #666666;
+    background-image: url(images/bg.gif);
+    background-repeat: repeat-x;
+}
+.font01 {
+    color: #006EBD;
+}
+.font02 {
+    color: #9932CB;
+    line-height:18px;
+    font-weight: bold;
+}
+.font03 {
+    color: #333333;
+    line-height:18px;
+}
+.font04 {
+    color: #339026;
+    line-height:18px;
+    font-weight: bold;
+}
+.font05 {
+    float: left;
+}
+.font06 {
+    float: right;
+    margin-right: 14px;
+}

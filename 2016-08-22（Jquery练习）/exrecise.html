@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="JS-frame/jquery-3.1.0.min.js"></script>
+    <script>
+        $(function(){
+            $("button").click(function(){
+                $(this).toggle(function() {
+                            $(".box").hide();
+                        },
+                        function(){
+                            $(".box").show();
+                        }
+            )
+            })
+        })
+    </script>
+    <style>
+        .lis{
+            width: 400px;
+            list-style: none;
+        }
+        .lis li{
+            width: 90px;
+            margin: 3px;
+            text-align: center;
+            float: left;
+        }
+        .lis li span{
+
+        }
+    </style>
+</head>
+<body>
+<ul class="lis">
+    <li><span><img src="images/32.jpg" alt="图片1"/></span></li>
+    <li><span><img src="images/33.jpg" alt="图片2"/></span></li>
+    <li><span><img src="images/34.jpg" alt="图片3"/></span></li>
+    <li><span><img src="images/35.jpg" alt="图片4"/></span></li>
+</ul>
+</body>
+</html>

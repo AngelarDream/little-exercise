@@ -1,0 +1,103 @@
+/*外部样式*/
+.wrap{
+    width: 788px;
+    margin: 0 auto;
+    background:url("../images/company_images/001.gif") repeat-y;
+}
+/*头部样式*/
+.top_nav{
+    width: 770px;
+    height: 62px;
+    margin: auto;
+    background: url("../images/company_images/002.gif")no-repeat;
+}
+.top_nav ul{
+    font-size: 14px;
+    list-style: none;
+    float: right;
+}
+.top_nav li{
+    display: inline;
+    padding-left: 6px;
+    padding-right: 6px;
+    line-height: 62px;
+    height: 62px;
+}
+.top_nav li a {
+    text-decoration:none;
+    color:#000000;
+}
+.top_pic{
+    width: 770px;
+    height: 195px;
+    background: url("../images/company_images/003.GIF") no-repeat;
+    margin: 5px auto 0;
+}
+/*线条样式*/
+.line{
+    width: 770px;
+    height: 14px;
+    background: url("../images/company_images/004.GIF")repeat-x;
+    margin: 5px auto 2px;
+}
+/*主体样式*/
+.main{
+    width: 790px;
+    margin: 0 auto;
+}
+.main_left{
+    width: 540px;
+    height: 400px;
+    margin-left: 5px;
+    float: left;
+}
+.main_left_top{
+    background: url("../images/company_images/005.GIF");
+    width: 540px;
+    height: 133px;
+}
+.main_left_top p{
+    width: 350px;
+    height: 80px;
+    line-height: 20px;
+    padding-top: 50px;
+    padding-left: 10px;
+}
+.intro{
+    float: left;
+    padding-right:10px;
+}
+.main_left_intro {
+    width: 260px;
+    border-bottom: 1px solid #e5e5e3;
+    padding-bottom: 6px;
+}
+.main_left_intro img:first-child{
+    float: left;
+}
+.main_left_intro dl{
+    width: 170px;
+    padding-left: 55px;
+}
+.main_left_intro dt dd{
+    line-height: 20px;
+    height: 20px;
+}
+/*主体右面样式*/
+.main_right{
+    width:200px;
+    background: url("../images/company_images/013.gif") no-repeat;
+    border-left:1px solid #cccccc;
+    padding-top:80px;
+    padding-left: 8px;
+    float: left;
+}
+.bottom{
+    width: 760px;
+    height: 30px;
+    background: url("../images/company_images/015.gif");
+    clear: both;
+    margin: auto;
+   text-align: center;
+    padding-top: 20px;
+}

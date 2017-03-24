@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/sportFrame01.js"></script>
+    <script>
+        //1.0
+        window.onload=function(){
+            var oBox=document.getElementById('box');
+            var aDiv=oBox.getElementsByTagName('div');
+            var d=0;
+            for(var i=0;i<aDiv.length;i++)
+            {
+                aDiv[i].index=i;
+                aDiv[i].onclick=function(){
+
+                    if(d==0) {
+                        for (var j = 0; j <= this.index; j++) {
+                            sportFrame(aDiv[j], 'width', 50);
+                        }
+                    }else if(d==1)
+                    {
+                        for (var j = aDiv.length-1; j >= this.index; j--) {
+                            sportFrame(aDiv[j], 'width', 400);
+                        }
+
+                    }
+
+
+                if(aDiv[this.index].offsetWidth==50)
+                {
+                    d=1;
+                }
+
+                if(aDiv[this.index].offsetWidth==400)
+                {
+                    d=0;  //对照值
+                }
+
+                };
+            }
+        };
+    </script>
+    <style>
+        #box { width: 490px;
+               height: 200px;
+               background: chartreuse;
+               position: relative;
+               left: 45%;}
+        div{ width: 400px;
+             height: 200px;}
+
+        div img{ width: 100%;
+
+                 height: 100%;}
+
+        #div1{ position: absolute;
+               left: 0;
+                top: 0;
+            z-index: 4;}
+        #div2{ position: absolute;
+            left: 30px;
+            top: 0;
+            z-index: 3;}
+        #div3{ position: absolute;
+            left: 60px;
+            top: 0;
+            z-index: 2;}
+        #div4{ position: absolute;
+            left: 90px;
+            top: 0;
+            z-index: 1;}
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="div1"><img src="images/7.jpg"></div>
+    <div id="div2"><img src="images/4.jpg"></div>
+    <div id="div3"><img src="images/5.jpg"></div>
+    <div id="div4"><img src="images/6.jpg"></div>
+</div>
+</body>
+</html>

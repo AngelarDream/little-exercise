@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var oBox=document.getElementById('box');
+            document.onmousemove=function(e){
+                var event=e||window.event;
+
+                oBox.style.left=event.clientX+'px';
+                oBox.style.top=event.clientY+'px';
+            };
+        };
+    </script>
+    <style>
+        #box {  width: 200px;
+                height: 200px;
+                background: firebrick;
+                position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

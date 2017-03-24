@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function inheritObject(o)
+        {
+            function F(){};
+            F.prototype=o;
+            return new F();
+        }  //类式继承方式封装
+
+
+        var  book={
+            name:'童话',
+            alikeBook:["一千零一夜","白雪公主"]
+        };
+
+
+        function  createBook(obj){
+
+            var o=new inheritObject(obj);
+
+            o.getName=function(){
+                return name;
+            };
+            return   o;
+        }
+
+        var book1=new createBook(book);
+        alert(book1.name);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

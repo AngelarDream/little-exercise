@@ -1,0 +1,114 @@
+/*样式重置*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+form{
+    outline: none;
+}
+/*首页样子设置*/
+body{
+    background: url("images/1237.gif") repeat-x;
+    width: 100%;
+    margin-left: 40px;
+}
+h2{
+    font:bold 36px arial;
+    color: firebrick;
+    margin: 40px 0;
+}
+ul{
+    list-style: none;
+}
+ul li{
+    display: inline;
+    padding: 15px;
+}
+ a{
+    text-decoration: none;
+    font: bold 20px sans-serif;
+     color: chocolate;
+}
+
+ul li a:hover{
+    color: #ffffff;
+    background-color: black;
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+/*主页样式设置*/
+.index-content{
+    width: 1005px;
+    margin: 40px auto;
+    background: url("images/007.jpg");
+}
+dl{
+    width: 400px;
+    height: 200px;
+    padding-top: 20px;
+    padding-left: 55px;
+}
+dt{
+    font:bold 20px sans-serif;
+    line-height: 30px;
+}
+dd{
+    font: normal 16px sans-serif;
+    line-height: 30px;
+}
+span{
+    line-height: 60px;
+}
+.back{
+    font: bold 18px sans-senif;
+    text-decoration: none;
+}
+/*电子相册样式*/
+.photo-content{
+    width: 960px;
+    margin: 10px auto;
+    clear:both;
+}
+.photo-content:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.pic{
+    float: left;
+    width: 280px;
+    padding:0 10px;
+}
+.pic img{
+    width: 280px;
+    height: 210px;
+}
+.pic p{
+    line-height: 30px;
+    text-align: center;
+    font: 500 16px sans-senif;
+}
+/*说说样式*/
+textarea{
+    width: 600px;
+    height: 200px;
+}
+input{
+    width: 50px;
+    line-height: 30px;
+    font: 600 20px senif;
+    background:rosybrown;
+}
+ol{
+    float: left;
+    margin: 10px;
+}
+ol li{
+    padding: 15px;
+}

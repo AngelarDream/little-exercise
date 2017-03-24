@@ -1,0 +1,18 @@
+/*样式重置*/
+html,body,div,h2,ul,p,h5{padding:0;margin:0;border:0;list-style: none;}
+body{background:#12398b;font: normal 12px "微软雅黑";color: #000;}
+/*字体样式*/
+.font01{font:normal 18px "Geneva, Arial";color: rgb(78,60,26)}
+.font02{font:normal 46px "yuweij";color:rgb( 255,255,255 )}
+.font03{font: normal 80px "ChaoGangHei";color:rgb( 255,255,255)}
+.font04{font:normal 20px "TRENDS";color:rgb(254,244,77); text-shadow: 0 2px 2px rgb(0,0,0);}
+.font05{font: normal 24px "FZTJLSJW";color:rgb( 200, 105,10);}
+.font06{font:normal 14px "MicrosoftYaHeiLight";color:rgb(119,93,30);}
+.font07{font:normal 40px "FZTJLSJW";color: rgb(255,230,151);}
+.font08{font:normal 16px "FZTJLSJW";color: rgb( 255,230,151);}
+.font09{font:normal 28px "QXyingbili";color:rgb(252,239,1);}
+.font10{font:normal 12px "Microsoft YaHei";color:rgb( 255,238,172)}
+.font11{font:bold 16px "Microsoft YaHei";color:rgb(255,252,13 )}
+.font12{font:normal 12px "Microsoft YaHei";color:rgb(255,255,255);}
+.font13{font:normal 18px "FZTJLSJW";color:rgb(255,254,254);}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>动画练习</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+        .div1{
+            width: 300px;
+            height:300px;
+            box-sizing: border-box;
+            border-left:20px solid #b94441;
+            border-top:20px solid #b94441;
+            border-right:20px solid #006600;
+            border-bottom:20px solid #006600;
+            border-radius: 300px;
+            float: left;
+        }
+        .div2{
+            width: 300px;
+            height:300px;
+            border-radius: 300px;
+            background:url("images/assets/1.jpg") no-repeat;
+            background-origin: padding-box;
+        }
+        .div1:hover{
+            transform: rotate(180deg);
+            transition: transform 5s ease;
+        }
+    </style>
+</head>
+<body>
+<div class="div1"></div>
+   <div class="div2">
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/sportFrame.js"></script>
+    <script>
+        window.onload=function(){
+            var oBox=document.getElementById('box');
+
+            oBox.onmouseover=function(){
+
+                sportFrame(oBox,'left',0);
+            };
+
+            oBox.onmouseout=function(){
+                sportFrame(oBox,'height',20);
+            };
+
+        };
+    </script>
+    <style>
+        #box{ width: 200px;
+              height: 400px;
+              background: olivedrab;
+              position: absolute;
+              left: -200px;
+        }
+        #box span{  display: block;
+                    width: 20px;
+                    height: 100px;
+                    background: chocolate;
+                    position: absolute;
+
+                    top:40%;
+                    right:-20px;}
+    </style>
+</head>
+<body>
+    <div id="box">
+        <span>分享到</span>
+    </div>
+</body>
+</html>

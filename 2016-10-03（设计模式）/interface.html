@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+//         var Car=function(){
+//             this.name='hello';
+//             this.age=30;
+//         };
+//
+//        Car.prototype.say=function(){
+//
+//            return new Error('代码不能使用'); //抽象方法   --凡是有抽象方法的类就是抽象类
+//                                            //抽象类必须被继承
+//                                            //子类如果要使用父类的方法是无效的。必须实现父类中所有的抽象方法
+//        };
+//
+//         var carBus=function(){
+//             Car.call(this);
+//            this.carBus='carBus';
+//         };
+//
+//         carBus.prototype=new Car();
+//
+//         carBus.prototype.get=function(){
+//             alert('get');
+//         };
+//         carBus.prototype.say=function(){
+//             alert('carBus');
+//         };
+//
+//         var c1=new Car();   //父类
+//         var s1=new carBus();// 子类
+//
+//         alert(s1.say());
+
+
+        //接口: 就是一个类内只有抽象方法。如果想使用接口，就必须实现说有的抽象方法。
+
+//         var adpter=function(){
+//             return {
+//                  say:function(){
+//                     return new Error('此方法是抽象方法');
+//                 },
+//                 sum:function(){
+//                     return new Error('此方法是抽象方法');
+//                 },
+//                 like:function(){
+//                     return new Error('此方法是抽象方法');
+//                 }
+//             };
+//
+//         };
+
+        var adpter=function(){};
+        adpter.prototype={
+                say:function(){
+                    return new Error('此方法是抽象方法');
+                },
+              sum:function(){
+                     return new Error('此方法是抽象方法');
+                 }
+        };
+
+
+       var u=function(){
+           adpter.call(this);
+       };
+        u.prototype=new adpter();
+        u.prototype.say=function(){
+            alert('u盘接口');
+        };
+
+       var phone=function(){
+           adpter.call(this);
+       };
+
+        phone.prototype=new adpter();
+        phone.prototype.say=function(){
+            alert('手机出电线接口');
+        };
+
+        var a1=new adpter();    // adpter a1=new u();
+        var a2=new adpter();
+        var u1=new u();
+        var p1=new phone();
+
+           a1=u1;    //子类向上转型
+           a2=p1;
+
+        alert(a1.say());
+        alert(a2.say());
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

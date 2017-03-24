@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../frames/jquery/jquery-3.1.0.min.js"></script>
+    <script>
+        $(function(){
+            var oDiv=$("<div>new div</div>");
+
+//            $('ul').append(oDiv);     //指定元素的内部的后面增加元素
+//             oDiv.appendTo($('ul'));
+              //$('ul').prepend(oDiv);     //指定元素的内部的前面增加元素
+
+              //$('#p1').insertAfter(oDiv); //元素移动 如果找不到指定的节点则相当删除该节点
+//            $('img').mouseover(function(){
+//                $(this).clone().appendTo($('#img01'));
+//            });
+
+//            $("#Span1").replaceWith("<span title='replaceWith'> 陶国荣</span>");
+//
+//            $("<span title='replaceAll'>tao_guo_rong@163.com</span>").replaceAll("#Span2");
+
+              //$('#p1').wrap('<div></div>');
+              //  $('ul').wrapInner('<div></div>');
+
+               //$('ul').empty();
+               $('p').remove('#p1');
+
+
+        });
+    </script>
+    <style>
+        #box { width: 300px;
+               height: 400px;
+               background: #ccc;
+          }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <p> 姓名：<span id="Span1"></span></p>
+        <p> 邮箱：<span id="Span2"></span></p>
+        <img src="../images/4.jpg">
+
+
+        <div>
+            <p id="p1">hello</p>
+        </div>
+
+
+        <p>hello</p>
+
+        <p>hello</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <p>hel</p>
+
+        <p>hel</p>
+
+        <p>hel</p>
+    </div>
+    <div id="img01"></div>
+</body>
+</html>

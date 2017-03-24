@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>对象转换</title>
+    <script type="text/javascript" src="frame/jquery-3.1.0.min.js"></script>
+    <script>
+        $(function () {
+            var $scr = $("#scr");
+            var scr = $scr[0];
+//            $scr.click(function(){
+//                if($scr.is(":checked")){
+//                    alert("谢谢");
+//                }
+//            });
+//            $scr.click(function(){
+//               if(scr.checked){
+//                   alert("谢谢");
+//               }
+//           })
+            scr.onclick = function(){
+                if($scr.is(":checked")){
+                    alert("谢谢");
+                }
+            }
+        });
+        var $src = $("#src");
+        var src = $src[0];
+        $src.click(function(){
+            if($src.is(":checked")){
+                alert("谢谢");
+            }
+        })
+    </script>
+</head>
+<body>
+<input type="checkbox" id="scr"><label for="scr">请仔细阅读后，在选择</label>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload=function(){
+	var oBtn01=document.getElementById('btn01');
+	oBtn01.onclick=function(){
+		var  xmlhr=new XMLHttpRequest();   //1、创建XMLHttpRequest对象  api
+		
+		xmlhr.open('GET','abc.txt?date='+new Date().getTime(),true);    //2、实例化连接，（请求方法，请求的路径，是否是异步或同步）
+		
+		xmlhr.send(); 			//发送请求对象
+		
+		xmlhr.onreadystatechange=function(){   //请求状态事件
+			if(xmlhr.readyState==4)
+			{
+				if(xmlhr.status==200)
+				{
+					var str=xmlhr.responseText;	
+					alert(str);	
+				}
+				
+			}
+		};
+	  };
+	};
+</script>
+</head>
+
+<body>
+	<h1>hello</h1>
+    <button id="btn01">发送</button>
+</body>
+</html>

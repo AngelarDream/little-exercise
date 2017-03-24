@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>七夕</title>
+    <link href="qixi.css" rel="stylesheet" type="text/css">
+    <!--<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>-->
+    <script src="jquery.js"></script>
+    <script src="Swipe.js" rel="stylesheet" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+    <ul class="content-wrap">
+        <li>
+            <div class="a_background">
+                <div class="a_background_top"></div>
+                <div class="a_background_middle"></div>
+                <div class="a_background_botton"></div>
+            </div>
+        </li>
+        <li>页面2</li>
+        <li>页面3</li>
+    </ul>
+    <div id="boy" class="char"></div>
+    <div class="button">
+    <button>点击开始动画</button>
+</div>
+    <!--<video src="" controls></video>-->
+    <!--<audio src=""></audio>-->
+    <!--<form>-->
+        <!--<input type="text" name="text-list">-->
+        <!--<details>-->
+            <!--<ul>-->
+                <!--<li>汽车</li>-->
+                <!--<li>火车</li>-->
+            <!--</ul>-->
+        <!--</details>-->
+    <!--</form>-->
+    <!--<input type="range">-->
+    <!--<input type="color"/>-->
+</div>
+<script type="text/javascript">
+
+    var swipe = Swipe($('#content'));
+    var getValue = function(className){
+        var $elem = $(''+className+'');
+        return{
+            height:$elem.height(),
+            top:$elem.position().top
+        };
+    };
+    var pathY = function(){
+        var data = getValue('.a_background_middle');
+        return data.top + data.height/2;
+    }();
+    var $boy = $('#boy');
+    var boyHeight = $boy.height();
+    $boy.css({
+        top:pathY-boyHeight+25
+    });
+    $('button').click(function () {
+       $boy.addClass('slowWalk');
+    });
+</script>
+</body>
+</html>

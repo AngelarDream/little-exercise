@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var oTxt01=document.getElementById('txt01');
+            var oBtn=document.getElementsByTagName('button')[0];
+            var oResult=document.getElementById('result');
+
+            oBtn.onkeydown=function(e){
+              var oEvent=e||window.event;
+
+                if(oEvent.keyCode==13&&oEvent.altKey){
+                    oResult.value=oTxt01.value;
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <input type="text" id="txt01">
+    <button>发布</button><br>
+    <textarea rows="10" cols="50" id="result"></textarea>
+</body>
+</html>

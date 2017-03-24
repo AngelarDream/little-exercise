@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //透明度
+        //任意物体，任意属性的运动框架（度量的）
+
+        window.onload=function(){
+            var oBox=document.getElementById('box');
+
+          oBox.onmouseover=function(){
+
+               sportFrame(oBox,'opacity',100);
+
+          };
+
+            oBox.onclick=function(){
+
+            };
+
+
+
+        };
+
+        var timer=null;
+
+        function sportFrame(obj,prop,end)
+        {
+            clearInterval(timer);
+
+            var speed=0;
+            var val=0;
+
+            timer=setInterval(function(){
+
+                if(prop=='opacity')
+                {
+                    val=Math.round(cssStyle(obj,prop)*100);
+                }
+                else
+                {
+                    val=parseInt(cssStyle(obj,prop));
+
+                }
+
+                speed=(end-val)/10;
+                speed=speed>0?Math.ceil(speed):Math.floor(speed);
+
+                if(end==val)
+                {
+                    clearInterval(timer);
+                }
+                else
+                {
+                    if(prop=='opacity')
+                    {
+                        obj.style.opacity=(val+speed)/100;
+                        obj.style.filter='alpha(opacity:'+(val+speed)+')';  //IE浏览器
+
+                    }else
+                    {
+                        cssStyle(obj,prop,parseInt(cssStyle(obj,prop))+speed);
+                    }
+                }
+
+
+            },30);
+
+
+
+        }
+
+        function cssStyle(obj,prop,value)
+        {
+            //传递两个参数的时候的功能是获取该对象的属性值
+            //传递三个参数的时候的功能是设置该对象的属性的值
+            //arguments 就是保存传递参数的数组
+            if(arguments.length==2)
+            {
+                if(obj.currentStyle)
+                {
+                    return obj.currentStyle[prop];  // IE 浏览器的使用
+                }
+                else
+                {
+                    return getComputedStyle(obj,false)[prop];  //FF  chrome 高版本的浏览器
+                }
+            }
+            else if(arguments.length==3)
+            {
+                obj.style[prop]=value+'px';
+            }
+            else
+            {
+
+            }
+        }
+
+    </script>
+    <style>
+        #box{width: 200px;
+             height: 200px;
+            background: darkorchid;
+            opacity: 0.3;          /*chrome ff*/
+            filter: alpha(opacity:30); /*IE*/
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

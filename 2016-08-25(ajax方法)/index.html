@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../frames/jquery/jquery-3.1.0.min.js"></script>
+    <script>
+        $(function(){
+            $('#btn01').click(function(){
+                $('#text').load('test.html');
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="btn01" value="加载">
+    <div id="text"></div>
+</body>
+</html>

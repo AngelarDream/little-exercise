@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>拖拽练习</title>
+    <script>
+        window.onload=function(){
+            var oBox = document.getElementById("box");
+            oBox.onmousedown = function(ev){
+                var Event = ev||window.event;
+                var iDiv = document.createElement("div");
+                iDiv.className = "div-border";
+                iDiv.style.left=oBox.offsetLeft+'px';
+                iDiv.style.top=oBox.offsetTop+'px';
+                document.body.appendChild(iDiv);
+                var px = Event.clientX - iDiv.offsetLeft;
+                var py = Event.clientY - iDiv.offsetTop;
+                iDiv.onmousemove = function(ev){
+                    var Event = ev||window.event;
+                    var l = Event.clientX - px;
+                    var t = Event.clientY - py;
+                    if(l<0){
+                        l=0;
+                    }else if(l>document.documentElement.clientWidth-iDiv.offsetWidth){
+                        l=document.documentElement.clientWidth-iDiv.offsetWidth;
+                    }
+                    if(t<0){
+                        t=0;
+                    }else if(t>document.documentElement.clientHeight-iDiv.offsetHeight){
+                        t=document.documentElement.clientHeight-iDiv.offsetHeight;
+                    }
+                    iDiv.style.left = l+'px';
+                    iDiv.style.top = t +'px';
+                };
+                document.onmouseup = function(ev){
+                    var Event = ev||window.event;
+                    iDiv.onmousemove=null;
+                    iDiv.onmouseup=null;
+                    oBox.style.left = iDiv.offsetLeft+"px";
+                    oBox.style.top = iDiv.offsetTop+"px";
+                    document.body.removeChild(iDiv);
+
+                };
+            };
+        };
+    </script>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background:#c0c0c0;
+            position: absolute;
+        }
+        .div-border{
+            width: 100px;
+            height: 100px;
+            border:2px dotted green;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+           // var  oUl=document.getElementById('ul1');
+
+            var oBox=document.getElementsByTagName('div')[0];
+
+            //oBox.setAttribute('width',800);   //操作的是定义属性，不是样式属性
+            //alert(oBox.getAttribute('width'));
+
+            oBox.setAttribute('class','box');
+
+            oBox.setAttribute('class',oBox.getAttribute('class')+' '+'active');
+
+            oBox.removeAttribute('class');
+
+//            alert(oUl.nodeName);
+//            alert(oUl.nodeType);
+//            alert(oUl.childNodes.length); //只有节点都会获取（文本节点---空）
+//            alert(oUl.children.length);   //只获取元素节点
+
+//            for(var i=0;i<oUl.childNodes.length;i++)
+//            {
+//               if(oUl.childNodes[i].nodeType==1)
+//                {
+//                    oUl.childNodes[i].style.background='red';
+//                }
+//            }
+
+//            for(var i=0;i<oUl.children.length;i++)
+//            {
+//                oUl.children[i].style.background='red';
+//            }
+//           if(!oUl.firstElementChild)
+//           {
+//               oUl.firstChild.style.background='red';  //IE
+//           }
+//            else {
+//               oUl.firstElementChild.style.background = 'red'; //chrome FF
+//           }
+//
+//            oUl.nextElementSibling.style.background='green';
+//            oUl.previousElementSibling.style.background='green';
+
+
+
+        };
+    </script>
+    <style>
+        .box { width: 200px;
+                height: 200px;
+                background: chartreuse;
+        }
+        .active{ width: 400px;
+            height: 400px;
+            background:red;}
+    </style>
+</head>
+<body>
+<div ></div>
+<!--<p>hello</p>-->
+<!--<p>hello</p>-->
+<!--<p>hello</p>-->
+<!--<ul id="ul1">-->
+    <!--<li>1</li>-->
+    <!--<li>2</li>-->
+    <!--<li>3</li>-->
+    <!--<li>4</li>-->
+    <!--<li>5</li>-->
+<!--</ul>-->
+<!--<p>hello</p>-->
+<!--<p>hello</p>-->
+<!--<p>hello</p>-->
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+
+            var oBtn=document.getElementById('btn');
+            var oBox=document.getElementById('box');
+            var aDiv=oBox.getElementsByTagName('div');
+            var oBtn1=document.getElementById('btn01');
+            var cout=0;
+            oBtn.onclick=function() {
+                var oDiv = document.createElement('div');  //创建节点
+
+                oDiv.style.width = '300px';
+                oDiv.style.height = '100px';
+                oDiv.style.background = 'red';
+                oDiv.style.margin='10px';
+                oDiv.innerHTML=''+(cout++);
+
+                if(aDiv.length==0)
+                {
+                    oBox.appendChild(oDiv);
+                }
+                else
+                {
+                    oBox.insertBefore(oDiv,aDiv[0]);
+
+                }
+
+//                if(aDiv.length>1)
+//                {
+//                    m=aDiv[1].cloneNode(true); //浅复制
+//                    oBox.appendChild(m);
+//                }
+
+            };
+
+            oBtn1.onclick=function(){
+//                oBox.removeChild(aDiv[3]);
+                  oBox.replaceChild(aDiv[0],aDiv[2]);
+            };
+
+        };
+    </script>
+</head>
+<body>
+    <div id="box">
+    </div>
+    <input type="button" id="btn" value="创建">
+    <input type="button" id="btn01" value="删除">
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+    body{ perspective:800px;
+		  perspective-origin:50%;}
+
+	#box{ width:200px;
+		  height:200px;
+		  background:#FC3;
+		  margin-left:400px;
+		  margin-top:300px;
+		  transform-style:preserve-3d;
+		 }
+	#div1{  width:100px;
+			height:100px;
+			background:#999;
+			transform:rotateY(90deg);
+			border:1px solid #CFF;
+			}
+	#div2{  width:100px;
+			height:100px;
+			background:#999;
+			border:1px solid #CFF;
+			}
+			
+	#a{ width:30px;
+		height:30px;
+		background:#F00;
+		border-radius:30px;
+        
+		margin:35px;
+		}
+</style>
+</head>
+
+<body>
+	<div id="box">
+    	<div id="div1">
+        	<div id="a"></div>
+        </div>
+        <div id="div2">
+        	<div id="a1">11</div>
+            <div id="b1">22</div>
+        </div>
+    </div>
+</body>
+</html>

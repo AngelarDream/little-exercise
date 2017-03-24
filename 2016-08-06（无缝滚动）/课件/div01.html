@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+
+            var aDiv=document.getElementsByTagName('div');
+            var temp=0;
+            var temp02=aDiv.length;
+            var timer=null;
+
+
+            aDiv[0].onclick=function(){   //每一秒显示一个层
+
+                setInterval(function(){
+                    temp++;
+
+                    aDiv[temp].style.display='block';
+
+                },1000)
+            };
+
+
+
+            for(var i=1;i<aDiv.length;i++)
+            {
+                aDiv[i].index=i;
+                aDiv[i].onmouseover=function(){   //鼠标滑动到层的上方，改变背景颜色
+
+                    this.style.background='red';
+                };
+
+            }
+
+            aDiv[aDiv.length-1].onmouseout=function(){  //每一秒钟，让层从后面开始隐藏一个层
+                 setInterval(function(){
+
+                        --temp02;
+                     aDiv[temp02].style.display='none';
+                 },1000);
+            };
+        };
+    </script>
+    <style>
+
+        div{ width: 100px;
+             height: 100px;
+             background: mediumpurple;
+             margin: 10px;
+            display: none;
+            border-radius: 100px;
+            float: left;
+         }
+    </style>
+</head>
+<body>
+ <div style="display: block;">1</div>
+ <div>2</div>
+ <div>3</div>
+ <div>4</div>
+ <div>2</div>
+ <div>3</div>
+ <div>4</div>
+ <div>2</div>
+ <div>3</div>
+ <div>4</div>
+ <div>2</div>
+ <div>3</div>
+ <div>4</div>
+</body>
+</html>

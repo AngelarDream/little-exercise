@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script>
+    var Book=function(name,price){
+            this.name=name;
+            this.price=price;
+            this.say=function(){
+                return 'book';
+            };
+    };
+
+    Book.prototype.ISBN='88389394934';
+
+    Book.ho='westos';
+
+
+    var b1=new Book('商贾将军',400);
+
+    for(var o in b1){
+
+        if(!b1.hasOwnProperty(o)) {
+            console.log(o + ',' + b1[o]);
+        }
+    }
+
+    console.log(b1.ho);
+
+</script>
+<body>
+
+</body>
+</html>
